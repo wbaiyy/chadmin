@@ -61,7 +61,11 @@
 </div>
 <div style="font-size:15px;">
     <div id="chartdiv1" style="width: 600px; height: 400px;"></div>
+    <p style="margin-left: 150px;margin-bottom: 20px;">医职员教育背景分布图</p>
+
     <div id="chartdiv" style="width: 1200px; height: 400px;"></div>
+    <p style="margin-left: 50px;margin-bottom: 20px;">医职员年龄和入职时间分布图</p>
+
 </div>
 
 
@@ -71,38 +75,38 @@
 
     var chartData = [
         {
-            "x": 10,
-            "y": 14,
+            "x": 18,
+            "y": 1,
             "value": 59
         },
         {
-            "x": 5,
-            "y": 3,
+            "x": 24,
+            "y": 2,
             "value": 50
         },
         {
-            "x": -10,
-            "y": -3,
+            "x": 30,
+            "y": 3,
             "value": 19
         },
         {
-            "x": -6,
-            "y": 5,
+            "x": 36,
+            "y": 4,
             "value": 65
         },
         {
-            "x": 15,
-            "y": -4,
+            "x": 42,
+            "y": 5,
             "value": 92
         },
         {
-            "x": 13,
-            "y": 1,
+            "x": 48,
+            "y": 6,
             "value": 8
         },
         {
-            "x": 1,
-            "y": 6,
+            "x": 54,
+            "y": 7,
             "value": 35
         }
     ];
@@ -116,14 +120,14 @@
         // AXES
         // X
         var xAxis = new AmCharts.ValueAxis();
-        xAxis.title = "X Axis";
+        xAxis.title = "年龄";
         xAxis.position = "bottom";
         xAxis.autoGridCount = true;
         chart.addValueAxis(xAxis);
 
         // Y
         var yAxis = new AmCharts.ValueAxis();
-        yAxis.title = "Y Axis";
+        yAxis.title = "入职时间";
         yAxis.position = "left";
         yAxis.autoGridCount = true;
         chart.addValueAxis(yAxis);
@@ -144,28 +148,28 @@
 
     var chartData1 = [
         {
-            "country": "Czech Republic",
+            "country": "本科",
             "litres": 156.9
         },
         {
-            "country": "Ireland",
+            "country": "硕士",
             "litres": 131.1
         },
         {
-            "country": "Germany",
+            "country": "教授",
             "litres": 115.8
         },
         {
-            "country": "Australia",
+            "country": "专科",
             "litres": 109.9
         },
         {
-            "country": "Austria",
+            "country": "博士",
             "litres": 108.3
         },
         {
-            "country": "UK",
-            "litres": 99
+            "country": "博士后",
+            "litres": 70
         }
     ];
 

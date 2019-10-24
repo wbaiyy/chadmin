@@ -61,7 +61,10 @@
 </div>
 <div style="font-size:15px;">
     <div id="chartdiv" style="width:100%; height:400px;"></div>
+    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份门诊数分布</p>
+
     <div id="chartdiv3" style="width: 100%; height: 400px;"></div>
+    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">当年门诊年龄数统计分布</p>
 </div>
 
 
@@ -73,227 +76,199 @@
     var chartData = [
         {
             "year": "1950",
-            "value": -0.307
+            "value": 16000
         },
         {
             "year": "1951",
-            "value": -0.168
+            "value": 16800
         },
         {
             "year": "1952",
-            "value": -0.073
+            "value": 17040
         },
         {
             "year": "1953",
-            "value": -0.027
+            "value": 16000
         },
         {
             "year": "1954",
-            "value": -0.251
+            "value": 17000
         },
         {
             "year": "1955",
-            "value": -0.281
+            "value": 19200
         },
         {
             "year": "1956",
-            "value": -0.348
+            "value": 16800
         },
         {
             "year": "1957",
-            "value": -0.074
+            "value": 16200
         },
         {
             "year": "1958",
-            "value": -0.011
+            "value": 15800
         },
         {
             "year": "1959",
-            "value": -0.074
+            "value": 12800
         },
         {
             "year": "1960",
-            "value": -0.124
+            "value": 19800
         },
         {
             "year": "1961",
-            "value": -0.024
+            "value": 15800
         },
         {
             "year": "1962",
-            "value": -0.022
+            "value": 16800
         },
         {
             "year": "1963",
-            "value": 0
+            "value": 13800
         },
         {
             "year": "1964",
-            "value": -0.296
+            "value": 23800
         },
         {
             "year": "1965",
-            "value": -0.217
+            "value": 17800
         },
         {
             "year": "1966",
-            "value": -0.147
+            "value": 13800
         },
         {
             "year": "1967",
-            "value": -0.15
+            "value": 15800
         },
         {
             "year": "1968",
-            "value": -0.16
+            "value": 17800
         },
         {
             "year": "1969",
-            "value": -0.011
+            "value": 16800
         },
         {
             "year": "1970",
-            "value": -0.068
+            "value": 19800
         },
         {
             "year": "1971",
-            "value": -0.19
+            "value": 14800
         },
         {
             "year": "1972",
-            "value": -0.056
+            "value": 12800
         },
         {
             "year": "1973",
-            "value": 0.077
+            "value": 18800
         },
         {
             "year": "1974",
-            "value": -0.213
+            "value": 13800
         },
         {
             "year": "1975",
-            "value": -0.17
+            "value": 17800
         },
         {
             "year": "1976",
-            "value": -0.254
+            "value": 16800
         },
         {
             "year": "1977",
-            "value": 0.019
+            "value": 11800
         },
         {
             "year": "1978",
-            "value": -0.063
+            "value": 17800
         },
         {
             "year": "1979",
-            "value": 0.05
+            "value": 13800
         },
         {
             "year": "1980",
-            "value": 0.077
+            "value": 16800
         },
         {
             "year": "1981",
-            "value": 0.12
+            "value": 12800
         },
         {
             "year": "1982",
-            "value": 0.011
+            "value": 16800
         },
         {
             "year": "1983",
-            "value": 0.177
+            "value": 19800
         },
         {
             "year": "1984",
-            "value": -0.021
+            "value": 14800
         },
         {
             "year": "1985",
-            "value": -0.037
+            "value": 11800
         },
         {
             "year": "1986",
-            "value": 0.03
+            "value": 17800
         },
         {
             "year": "1987",
-            "value": 0.179
+            "value": 18800
         },
         {
             "year": "1988",
-            "value": 0.18
+            "value": 15800
         },
         {
             "year": "1989",
-            "value": 0.104
+            "value": 11800
         },
         {
             "year": "1990",
-            "value": 0.255
+            "value": 14800
         },
         {
             "year": "1991",
-            "value": 0.21
+            "value": 18800
         },
         {
             "year": "1992",
-            "value": 0.065
+            "value": 13800
         },
         {
             "year": "1993",
-            "value": 0.11
+            "value": 14800
         },
         {
             "year": "1994",
-            "value": 0.172
+            "value": 18800
         },
         {
             "year": "1995",
-            "value": 0.269
+            "value": 13800
         },
         {
             "year": "1996",
-            "value": 0.141
+            "value": 10800
         },
         {
             "year": "1997",
-            "value": 0.353
+            "value": 11800
         },
         {
             "year": "1998",
-            "value": 0.548
-        },
-        {
-            "year": "1999",
-            "value": 0.298
-        },
-        {
-            "year": "2000",
-            "value": 0.267
-        },
-        {
-            "year": "2001",
-            "value": 0.411
-        },
-        {
-            "year": "2002",
-            "value": 0.462
-        },
-        {
-            "year": "2003",
-            "value": 0.47
-        },
-        {
-            "year": "2004",
-            "value": 0.445
-        },
-        {
-            "year": "2005",
-            "value": 0.47
+            "value": 19800
         }
     ];
 
@@ -369,42 +344,42 @@
 
     var chartData3 = [
         {
-            "country": "USA",
+            "country": "10岁-20岁",
             "visits": 4025,
             "pattern": {"url":"patterns/black/pattern21.png", "width":4, "height":4, "color":"#CC0000"}
         },
         {
-            "country": "China",
+            "country": "20岁-30岁",
             "visits": 1882,
             "pattern": {"url":"patterns/black/pattern20.png", "width":4, "height":4}
         },
         {
-            "country": "Japan",
+            "country": "10岁以下",
             "visits": 1809,
             "pattern": {"url":"patterns/black/pattern19.png", "width":4, "height":4}
         },
         {
-            "country": "Germany",
+            "country": "30岁-40岁",
             "visits": 1322,
             "pattern": {"url":"patterns/black/pattern18.png", "width":4, "height":4}
         },
         {
-            "country": "UK",
+            "country": "50岁-60岁",
             "visits": 1122,
             "pattern": {"url":"patterns/black/pattern17.png", "width":4, "height":4}
         },
         {
-            "country": "France",
+            "country": "70岁-80岁",
             "visits": 1114,
             "pattern": {"url":"patterns/black/pattern16.png", "width":4, "height":4}
         },
         {
-            "country": "India",
+            "country": "40岁-50岁",
             "visits": 984,
             "pattern": {"url":"patterns/black/pattern15.png", "width":4, "height":4}
         },
         {
-            "country": "Spain",
+            "country": "80岁以上",
             "visits": 711,
             "pattern": {"url":"patterns/black/pattern14.png", "width":4, "height":4}
         }

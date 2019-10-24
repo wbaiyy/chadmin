@@ -62,6 +62,8 @@
 <div style="font-size:15px;">
     <div id="chartdiv" style="width: 700px; height: 500px;"></div>
     <div id="chartdiv1" style="width:100%; height:400px;"></div>
+    <p style="margin-left: 40px;margin-bottom: 20px;margin-top: 20px;">当天住院患者呼叫次数统计分布</p>
+
 </div>
 
 
@@ -70,31 +72,31 @@
     var chart;
     var data = [
         {
-            "title": "Website visits",
+            "title": "感冒住院",
             "value": 200
         },
         {
-            "title": "Downloads",
+            "title": "外伤住院",
             "value": 123
         },
         {
-            "title": "Requested price list",
+            "title": "产科住院",
             "value": 98
         },
         {
-            "title": "Contaced for more info",
+            "title": "内科住院",
             "value": 72
         },
         {
-            "title": "Purchased",
+            "title": "五官科住院",
             "value": 65
         },
         {
-            "title": "Contacted for support",
+            "title": "肿瘤住院",
             "value": 45
         },
         {
-            "title": "Purchased additional products",
+            "title": "皮肤科住院",
             "value": 36
         }
     ];

@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => '医院查询系统',
+        'brandLabel' => '广元市第一人民医院',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,13 +36,13 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
-            ['label' => '首页', 'url' => ['/site/index']],
-            ['label' => '全院查询统计', 'url' => ['/site/all']],
+            //['label' => '首页', 'url' => ['/site/index']],
+            ['label' => '全院查询统计', 'url' => ['/site/index']],
             ['label' => '门诊查询统计', 'url' => ['/site/door']],
             ['label' => '住院查询统计', 'url' => ['/site/live']],
             ['label' => '药品综合查询统计', 'url' => ['/site/medicinal']],
-            ['label' => '设备查询统计', 'url' => ['/site/equipment']],
-            ['label' => '自定义查询统计', 'url' => ['/site/custom']],
+            ['label' => '医用设备查询统计', 'url' => ['/site/equipment']],
+            ['label' => '职工查询统计', 'url' => ['/site/custom']],
             ['label' => '批量下载', 'url' => ['/site/export']],
             Yii::$app->user->isGuest ? (
             ['label' => '登录', 'url' => ['/site/login']]
@@ -73,7 +73,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">广元第一人民医院</p>
     </div>
 </footer>
 

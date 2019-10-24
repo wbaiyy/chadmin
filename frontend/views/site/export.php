@@ -61,10 +61,11 @@
 </div>
 <div style="font-size:15px;">
 	<span style="color: #CC0000;">
-			<p>Warning! Exporting to image works only if you view this file from web server. Exporting works with all modern browsers except IE9 (works fine with IE10).</p>
-            <p>Since version 3.14 chart export is done using dedicated plugin, located in amCharts/plugins/export folder. Please refer to bundled examples and README.md file for more information.</p>
+			<p>支持各种类型文件下载，包括图片（PDF，PNG，SVG），文件（CSV，JSON，XLSX）</p>
 		</span>
     <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份病人数分布</p>
+
 </div>
 
 
@@ -73,71 +74,71 @@
     var chart;
 
     var chartData = [{
-        "country": "USA",
-        "visits": 4025,
+        "country": "2017",
+        "visits": 1925,
         "color": "#FF0F00"
     }, {
-        "country": "China",
+        "country": "2016",
         "visits": 1882,
         "color": "#FF6600"
     }, {
-        "country": "Japan",
+        "country": "2015",
         "visits": 1809,
         "color": "#FF9E01"
     }, {
-        "country": "Germany",
+        "country": "2014",
         "visits": 1322,
         "color": "#FCD202"
     }, {
-        "country": "UK",
+        "country": "2013",
         "visits": 1122,
         "color": "#F8FF01"
     }, {
-        "country": "France",
+        "country": "2012",
         "visits": 1114,
         "color": "#B0DE09"
     }, {
-        "country": "India",
+        "country": "2011",
         "visits": 984,
         "color": "#04D215"
     }, {
-        "country": "Spain",
+        "country": "2010",
         "visits": 711,
         "color": "#0D8ECF"
     }, {
-        "country": "Netherlands",
+        "country": "2009",
         "visits": 665,
         "color": "#0D52D1"
     }, {
-        "country": "Russia",
+        "country": "2008",
         "visits": 580,
         "color": "#2A0CD0"
     }, {
-        "country": "South Korea",
+        "country": "2007",
         "visits": 443,
         "color": "#8A0CCF"
     }, {
-        "country": "Canada",
+        "country": "2006",
         "visits": 441,
         "color": "#CD0D74"
     }, {
-        "country": "Brazil",
+        "country": "2005",
         "visits": 395,
         "color": "#754DEB"
     }, {
-        "country": "Italy",
+        "country": "2004",
         "visits": 386,
         "color": "#DDDDDD"
     }, {
-        "country": "Australia",
+        "country": "2003",
         "visits": 384,
         "color": "#999999"
     }, {
-        "country": "Taiwan",
+        "country": "2002",
         "visits": 338,
         "color": "#333333"
     }, {
-        "country": "Poland",
+        "country": "2001",
         "visits": 328,
         "color": "#000000"
     }];
@@ -156,7 +157,7 @@
         },
 
         valueAxes: [{
-            title: "Visitors"
+            title: "人数"
         }],
 
         graphs: [{

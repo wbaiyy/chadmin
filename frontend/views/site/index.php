@@ -67,7 +67,11 @@
         <div id="chartdiv2" style="width: 500px; height: 400px;position: relative;display: inline-block;vertical-align: top;margin-left: 30px;"></div>
     </div>
 
-    <div id="chartdiv3" style="width:100%; height:400px;"></div>
+    <div id="chartdiv3" style="width:100%; height:400px;">
+    </div>
+    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份病人数分布</p>
+
+
     <div id="chartdiv4" style="width:100%; height:600px;"></div>
 </div>
 
@@ -107,24 +111,24 @@
             theme: theme,
             dataProvider: [{
                 "year": 2005,
-                "收入": 23.5,
-                "支出": 18.1
+                "医院收入": 23.5,
+                "医院支出": 18.1
             }, {
                 "year": 2006,
-                "收入": 26.2,
-                "支出": 22.8
+                "医院收入": 26.2,
+                "医院支出": 22.8
             }, {
                 "year": 2007,
-                "收入": 30.1,
-                "支出": 23.9
+                "医院收入": 30.1,
+                "医院支出": 23.9
             }, {
                 "year": 2008,
-                "收入": 29.5,
-                "支出": 25.1
+                "医院收入": 29.5,
+                "医院支出": 25.1
             }, {
                 "year": 2009,
-                "收入": 24.6,
-                "支出": 25
+                "医院收入": 24.6,
+                "医院支出": 25
             }],
             categoryField: "year",
             startDuration: 1,
@@ -137,15 +141,15 @@
             }],
             graphs: [{
                 type: "column",
-                title: "收入",
-                valueField: "收入",
+                title: "医院收入",
+                valueField: "医院收入",
                 lineAlpha: 0,
                 fillAlphas: 0.8,
                 balloonText: "[[title]] in [[category]]:<b>[[value]]</b>"
             }, {
                 type: "line",
-                title: "支出",
-                valueField: "支出",
+                title: "医院支出",
+                valueField: "医院支出",
                 lineThickness: 2,
                 fillAlphas: 0,
                 bullet: "round",
@@ -161,23 +165,23 @@
             type: "pie",
             theme: theme,
             dataProvider: [{
-                "country": "韦国华医生",
+                "country": "韦果华医生",
                 "litres": 156.9
             }, {
                 "country": "赵小锅医生",
                 "litres": 131.1
             }, {
-                "country": "老金医生",
+                "country": "金大洋医生",
                 "litres": 115.8
             }, {
-                "country": "大彪医生",
+                "country": "易大彪医生",
                 "litres": 109.9
             }, {
-                "country": "杨小瓜护士",
+                "country": "丁丁医生",
                 "litres": 108.3
             }, {
-                "country": "丁大姐医生",
-                "litres": 65
+                "country": "其他医生",
+                "litres": 265
             }, {
                 "country": "咸鱼医生",
                 "litres": 50
@@ -198,228 +202,68 @@
     // months in JS are zero-based, 0 means January
     var chartData = [
         {
-            "year": "1950",
-            "value": -0.307
-        },
-        {
-            "year": "1951",
-            "value": -0.168
-        },
-        {
-            "year": "1952",
-            "value": -0.073
-        },
-        {
-            "year": "1953",
-            "value": -0.027
-        },
-        {
-            "year": "1954",
-            "value": -0.251
-        },
-        {
-            "year": "1955",
-            "value": -0.281
-        },
-        {
-            "year": "1956",
-            "value": -0.348
-        },
-        {
-            "year": "1957",
-            "value": -0.074
-        },
-        {
-            "year": "1958",
-            "value": -0.011
-        },
-        {
-            "year": "1959",
-            "value": -0.074
-        },
-        {
-            "year": "1960",
-            "value": -0.124
-        },
-        {
-            "year": "1961",
-            "value": -0.024
-        },
-        {
-            "year": "1962",
-            "value": -0.022
-        },
-        {
-            "year": "1963",
-            "value": 0
-        },
-        {
-            "year": "1964",
-            "value": -0.296
-        },
-        {
-            "year": "1965",
-            "value": -0.217
-        },
-        {
-            "year": "1966",
-            "value": -0.147
-        },
-        {
-            "year": "1967",
-            "value": -0.15
-        },
-        {
-            "year": "1968",
-            "value": -0.16
-        },
-        {
-            "year": "1969",
-            "value": -0.011
-        },
-        {
-            "year": "1970",
-            "value": -0.068
-        },
-        {
-            "year": "1971",
-            "value": -0.19
-        },
-        {
-            "year": "1972",
-            "value": -0.056
-        },
-        {
-            "year": "1973",
-            "value": 0.077
-        },
-        {
-            "year": "1974",
-            "value": -0.213
-        },
-        {
-            "year": "1975",
-            "value": -0.17
-        },
-        {
-            "year": "1976",
-            "value": -0.254
-        },
-        {
-            "year": "1977",
-            "value": 0.019
-        },
-        {
-            "year": "1978",
-            "value": -0.063
-        },
-        {
-            "year": "1979",
-            "value": 0.05
-        },
-        {
-            "year": "1980",
-            "value": 0.077
-        },
-        {
-            "year": "1981",
-            "value": 0.12
-        },
-        {
-            "year": "1982",
-            "value": 0.011
-        },
-        {
-            "year": "1983",
-            "value": 0.177
-        },
-        {
-            "year": "1984",
-            "value": -0.021
-        },
-        {
-            "year": "1985",
-            "value": -0.037
-        },
-        {
-            "year": "1986",
-            "value": 0.03
-        },
-        {
-            "year": "1987",
-            "value": 0.179
-        },
-        {
-            "year": "1988",
-            "value": 0.18
-        },
-        {
-            "year": "1989",
-            "value": 0.104
-        },
-        {
-            "year": "1990",
-            "value": 0.255
-        },
-        {
-            "year": "1991",
-            "value": 0.21
-        },
-        {
-            "year": "1992",
-            "value": 0.065
-        },
-        {
-            "year": "1993",
-            "value": 0.11
-        },
-        {
-            "year": "1994",
-            "value": 0.172
-        },
-        {
             "year": "1995",
-            "value": 0.269
+            "value": 16002
         },
         {
             "year": "1996",
-            "value": 0.141
+            "value": 17012
         },
         {
             "year": "1997",
-            "value": 0.353
+            "value": 17902
         },
         {
             "year": "1998",
-            "value": 0.548
+            "value": 18002
         },
         {
             "year": "1999",
-            "value": 0.298
+            "value": 20000
         },
         {
             "year": "2000",
-            "value": 0.267
+            "value": 20389
         },
         {
             "year": "2001",
-            "value": 0.411
+            "value": 20689
         },
         {
             "year": "2002",
-            "value": 0.462
+            "value": 21810
         },
         {
             "year": "2003",
-            "value": 0.47
+            "value": 22968
         },
         {
             "year": "2004",
-            "value": 0.445
+            "value": 24968
         },
         {
             "year": "2005",
-            "value": 0.47
+            "value": 21968
+        },
+        {
+            "year": "2006",
+            "value": 18689
+        },
+        {
+            "year": "2007",
+            "value": 23123
+        },
+        {
+            "year": "2008",
+            "value": 18968
+        },
+        {
+            "year": "2009",
+            "value": 19001
+        },
+        {
+            "year": "2010",
+            "value": 29001
         }
     ];
 
@@ -457,7 +301,7 @@
         graph.type = "step"; // this line makes step graph
         graph.valueField = "value";
         graph.lineColor = "#000000";
-        graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]] C</span></b>";
+        graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]] 个</span></b>";
         chart.addGraph(graph);
 
         // CURSOR
@@ -498,7 +342,7 @@
         },
         {
             "year": 2009,
-            "income": 24.6
+            "income": 34.6
         }
     ];
 
@@ -527,7 +371,7 @@
         // value
         var valueAxis = new AmCharts.ValueAxis();
         valueAxis.axisColor = "#DADADA";
-        valueAxis.title = "Income in millions, USD";
+        valueAxis.title = "医用设备使用次数统计";
         valueAxis.gridAlpha = 0.1;
         chart.addValueAxis(valueAxis);
 
@@ -536,7 +380,7 @@
         graph.title = "Income";
         graph.valueField = "income";
         graph.type = "column";
-        graph.balloonText = "Income in [[category]]:[[value]]";
+        graph.balloonText = "使用次数 [[category]]:[[value]]";
         graph.lineAlpha = 0;
         graph.fillColors = "#bf1c25";
         graph.fillAlphas = 1;
