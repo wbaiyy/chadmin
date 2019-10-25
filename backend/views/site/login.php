@@ -5,8 +5,8 @@ use yii\captcha\Captcha;
 ?>
 
 <div class="login-box">
-  <div class="login-logo">
-    <a href="<?=Url::toRoute('site/login')?>">广元市第一人民医院</a>
+  <div class="login-logo" style="font-size: 27px;">
+    <a href="<?=Url::toRoute('site/login')?>">某地区经济运行分析预测系统</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

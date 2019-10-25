@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = '广元市第一人民医院';
+$this->title = '某地区经济运行分析预测系统';
 
 $system_menus = Yii::$app->user->identity->getSystemMenus();
 $system_rights = Yii::$app->user->identity->getSystemRights();

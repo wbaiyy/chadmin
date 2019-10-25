@@ -9,19 +9,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">科室</a>
+                <a class="navbar-brand" href="#">经济概览</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
 
                 <form class="navbar-form navbar-left" role="search">
                     请选择时间：
@@ -32,27 +23,37 @@
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">区域选择<strong class="caret"></strong></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">性别</a>
+                                <a href="#">福田区</a>
                             </li>
                             <li>
-                                <a href="#">病人来源</a>
+                                <a href="#">南山区</a>
                             </li>
                             <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
+                                <a href="#">罗湖区</a>
                             </li>
                             <li>
-                                <a href="#">费别</a>
+                                <a href="#">宝安区</a>
+                            </li>
+                            <li>
+                                <a href="#">龙华区</a>
+                            </li>
+                            <li>
+                                <a href="#">龙岗区</a>
+                            </li>
+                            <li>
+                                <a href="#">坪山区</a>
+                            </li>
+                            <li>
+                                <a href="#">盐田区</a>
                             </li>
                         </ul>
+                    <li>
+                        <a href="#">导出数据</a>
+                    </li>
                     </li>
                 </ul>
             </div>
@@ -69,7 +70,7 @@
 
     <div id="chartdiv3" style="width:100%; height:400px;">
     </div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份病人数分布</p>
+    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;"> 2014-2018年建筑业增加值（亿元）</p>
 
 
     <div id="chartdiv4" style="width:100%; height:600px;"></div>
@@ -110,26 +111,27 @@
             type: "serial",
             theme: theme,
             dataProvider: [{
-                "year": 2005,
-                "医院收入": 23.5,
-                "医院支出": 18.1
+                "year": 2014,
+                "地区生产总值(千亿)": 16.64948,
+                "比上年增长(%)": 8.1
             }, {
-                "year": 2006,
-                "医院收入": 26.2,
-                "医院支出": 22.8
+                "year": 2015,
+                "地区生产总值(千亿)":18.04137 ,
+                "比上年增长(%)": 8.8
             }, {
-                "year": 2007,
-                "医院收入": 30.1,
-                "医院支出": 23.9
+                "year": 2016,
+                "地区生产总值(千亿)":20.07970,
+                "比上年增长(%)": 9.2
             }, {
-                "year": 2008,
-                "医院收入": 29.5,
-                "医院支出": 25.1
+                "year": 2017,
+                "地区生产总值(千亿)": 22.49007,
+                "比上年增长(%)": 8.2
             }, {
-                "year": 2009,
-                "医院收入": 24.6,
-                "医院支出": 25
-            }],
+                "year": 2018,
+                "地区生产总值(千亿)": 24.41936,
+                "比上年增长(%)": 7.6
+            },
+            ],
             categoryField: "year",
             startDuration: 1,
 
@@ -137,19 +139,19 @@
                 gridPosition: "start"
             },
             valueAxes: [{
-                title: "医院收支统计"
+                title: " 2014-2018年地区生产总值及增长速度"
             }],
             graphs: [{
                 type: "column",
-                title: "医院收入",
-                valueField: "医院收入",
+                title: "地区生产总值(千亿)",
+                valueField: "地区生产总值(千亿)",
                 lineAlpha: 0,
                 fillAlphas: 0.8,
                 balloonText: "[[title]] in [[category]]:<b>[[value]]</b>"
             }, {
                 type: "line",
-                title: "医院支出",
-                valueField: "医院支出",
+                title: "比上年增长(%)",
+                valueField: "比上年增长(%)",
                 lineThickness: 2,
                 fillAlphas: 0,
                 bullet: "round",
@@ -165,26 +167,29 @@
             type: "pie",
             theme: theme,
             dataProvider: [{
-                "country": "韦果华医生",
-                "litres": 156.9
+                "country": "福田区",
+                "litres": 4018.26
             }, {
-                "country": "赵小锅医生",
-                "litres": 131.1
+                "country": "南山区",
+                "litres": 5018.36
             }, {
-                "country": "金大洋医生",
-                "litres": 115.8
+                "country": "宝安区",
+                "litres": 3612.18
             }, {
-                "country": "易大彪医生",
-                "litres": 109.9
+                "country": "罗湖区",
+                "litres": 2253.69
             }, {
-                "country": "丁丁医生",
-                "litres": 108.3
+                "country": "龙岗区",
+                "litres": 4287.86
             }, {
-                "country": "其他医生",
-                "litres": 265
+                "country": "龙华区",
+                "litres": 2401.82
             }, {
-                "country": "咸鱼医生",
-                "litres": 50
+                "country": "坪山区",
+                "litres": 701.66
+            }, {
+                "country": "盐田区",
+                "litres": 612.76
             }],
             titleField: "country",
             valueField: "litres",
@@ -202,68 +207,24 @@
     // months in JS are zero-based, 0 means January
     var chartData = [
         {
-            "year": "1995",
-            "value": 16002
+            "year": "2014",
+            "value": 468.58
         },
         {
-            "year": "1996",
-            "value": 17012
+            "year": "2015",
+            "value": 479.72
         },
         {
-            "year": "1997",
-            "value": 17902
+            "year": "2016",
+            "value": 526.67
         },
         {
-            "year": "1998",
-            "value": 18002
+            "year": "2017",
+            "value": 594.07
         },
         {
-            "year": "1999",
-            "value": 20000
-        },
-        {
-            "year": "2000",
-            "value": 20389
-        },
-        {
-            "year": "2001",
-            "value": 20689
-        },
-        {
-            "year": "2002",
-            "value": 21810
-        },
-        {
-            "year": "2003",
-            "value": 22968
-        },
-        {
-            "year": "2004",
-            "value": 24968
-        },
-        {
-            "year": "2005",
-            "value": 21968
-        },
-        {
-            "year": "2006",
-            "value": 18689
-        },
-        {
-            "year": "2007",
-            "value": 23123
-        },
-        {
-            "year": "2008",
-            "value": 18968
-        },
-        {
-            "year": "2009",
-            "value": 19001
-        },
-        {
-            "year": "2010",
-            "value": 29001
+            "year": "2018",
+            "value": 724.48
         }
     ];
 
@@ -301,7 +262,7 @@
         graph.type = "step"; // this line makes step graph
         graph.valueField = "value";
         graph.lineColor = "#000000";
-        graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]] 个</span></b>";
+        graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]] 亿元</span></b>";
         chart.addGraph(graph);
 
         // CURSOR
@@ -325,24 +286,48 @@
 
     var chartData1 = [
         {
-            "year": 2005,
-            "income": 23.5
+            "year": "2月",
+            "income": 8.1
         },
         {
-            "year": 2006,
-            "income": 26.2
+            "year": "3月",
+            "income": 8.9
         },
         {
-            "year": 2007,
-            "income": 30.1
+            "year": "4月",
+            "income": 9.9
         },
         {
-            "year": 2008,
-            "income": 29.5
+            "year": "5月",
+            "income": 8.7
         },
         {
-            "year": 2009,
-            "income": 34.6
+            "year": "6月",
+            "income": 7.4
+        },
+        {
+            "year": "7月",
+            "income": 6.9
+        },
+        {
+            "year": "8月",
+            "income": 7.5
+        },
+        {
+            "year": "9月",
+            "income": 8.3
+        },
+        {
+            "year": "10月",
+            "income": 9.0
+        },
+        {
+            "year": "11月",
+            "income": 9.2
+        },
+        {
+            "year": "12月",
+            "income": 9.5
         }
     ];
 
@@ -371,7 +356,7 @@
         // value
         var valueAxis = new AmCharts.ValueAxis();
         valueAxis.axisColor = "#DADADA";
-        valueAxis.title = "医用设备使用次数统计";
+        valueAxis.title = "2018年规模以上工业增加值累计同比增长速度（%）";
         valueAxis.gridAlpha = 0.1;
         chart.addValueAxis(valueAxis);
 

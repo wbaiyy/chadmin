@@ -27,23 +27,23 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => '广元市第一人民医院',
+        'brandLabel' => '某地区经济运行分析预测系统',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top ',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-left'],
+        'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             //['label' => '首页', 'url' => ['/site/index']],
-            ['label' => '全院查询统计', 'url' => ['/site/index']],
-            ['label' => '门诊查询统计', 'url' => ['/site/door']],
-            ['label' => '住院查询统计', 'url' => ['/site/live']],
-            ['label' => '药品综合查询统计', 'url' => ['/site/medicinal']],
-            ['label' => '医用设备查询统计', 'url' => ['/site/equipment']],
-            ['label' => '职工查询统计', 'url' => ['/site/custom']],
-            ['label' => '批量下载', 'url' => ['/site/export']],
+            ['label' => '首页', 'url' => ['/site/index']],
+            ['label' => '趋势分析', 'url' => ['/site/door']],
+            ['label' => '构成分析', 'url' => ['/site/live']],
+            ['label' => '排名分析', 'url' => ['/site/medicinal']],
+            ['label' => '对比分析', 'url' => ['/site/equipment']],
+            ['label' => '关联分析', 'url' => ['/site/custom']],
+            ['label' => '下载数据', 'url' => ['/site/export']],
             Yii::$app->user->isGuest ? (
             ['label' => '登录', 'url' => ['/site/login']]
             ) : (
