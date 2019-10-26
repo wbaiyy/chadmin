@@ -40,9 +40,9 @@ AppAsset::register($this);
             ['label' => '首页', 'url' => ['/site/index']],
             ['label' => '趋势分析', 'url' => ['/site/door']],
             ['label' => '构成分析', 'url' => ['/site/live']],
-            ['label' => '排名分析', 'url' => ['/site/medicinal']],
-            ['label' => '对比分析', 'url' => ['/site/equipment']],
-            ['label' => '关联分析', 'url' => ['/site/custom']],
+            ['label' => '对比分析', 'url' => ['/site/medicinal']],
+            ['label' => '关联分析', 'url' => ['/site/equipment']],
+            ['label' => '排名分析', 'url' => ['/site/custom']],
             ['label' => '下载数据', 'url' => ['/site/export']],
             Yii::$app->user->isGuest ? (
             ['label' => '登录', 'url' => ['/site/login']]
