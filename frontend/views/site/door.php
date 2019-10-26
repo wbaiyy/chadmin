@@ -8,63 +8,61 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">科室</a>
+                <a class="navbar-brand" href="#">趋势变化分析</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="开始时间"/> -
-                        <input type="text" class="form-control" placeholder="结束时间"/>
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <?php include('search.php'); ?>
 
         </nav>
     </div>
 </div>
 <div style="font-size:15px;">
+    <p style="margin-left: 10px;margin-top: 50px;margin-bottom: 10px;">各年度经济指标总量（亿元）</p>
     <div id="chartdiv" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份门诊数分布</p>
 
+    <div class="" style="margin-top: 30px;">
+        <table class="table table-striped">
+            <caption>2014-2018年全部工业增加值及增长速度</caption>
+            <thead>
+            <tr>
+                <th>年份</th>
+                <th>工业增加值（亿元）</th>
+                <th>比上年增长（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2018</td>
+                <td>9245.0</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>8749.14</td>
+                <td>9.4</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>7800.22</td>
+                <td>8.1</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>7214.17</td>
+                <td>7.6</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>6773.70</td>
+                <td>8.2</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <p style="margin-left: 10px;margin-top: 50px;margin-bottom: 10px;">近2年各季度经济增长比例（%）</p>
     <div id="chartdiv3" style="width: 100%; height: 400px;"></div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">当年门诊年龄数统计分布</p>
 </div>
 
 
@@ -75,200 +73,160 @@
 
     var chartData = [
         {
-            "year": "1950",
-            "value": 16000
-        },
-        {
-            "year": "1951",
-            "value": 16800
-        },
-        {
-            "year": "1952",
-            "value": 17040
-        },
-        {
-            "year": "1953",
-            "value": 16000
-        },
-        {
-            "year": "1954",
-            "value": 17000
-        },
-        {
-            "year": "1955",
-            "value": 19200
-        },
-        {
-            "year": "1956",
-            "value": 16800
-        },
-        {
-            "year": "1957",
-            "value": 16200
-        },
-        {
-            "year": "1958",
-            "value": 15800
-        },
-        {
-            "year": "1959",
-            "value": 12800
-        },
-        {
-            "year": "1960",
-            "value": 19800
-        },
-        {
-            "year": "1961",
-            "value": 15800
-        },
-        {
-            "year": "1962",
-            "value": 16800
-        },
-        {
-            "year": "1963",
-            "value": 13800
-        },
-        {
-            "year": "1964",
-            "value": 23800
-        },
-        {
-            "year": "1965",
-            "value": 17800
-        },
-        {
-            "year": "1966",
-            "value": 13800
-        },
-        {
-            "year": "1967",
-            "value": 15800
-        },
-        {
-            "year": "1968",
-            "value": 17800
-        },
-        {
-            "year": "1969",
-            "value": 16800
-        },
-        {
-            "year": "1970",
-            "value": 19800
-        },
-        {
-            "year": "1971",
-            "value": 14800
-        },
-        {
-            "year": "1972",
-            "value": 12800
-        },
-        {
-            "year": "1973",
-            "value": 18800
-        },
-        {
-            "year": "1974",
-            "value": 13800
-        },
-        {
-            "year": "1975",
-            "value": 17800
-        },
-        {
-            "year": "1976",
-            "value": 16800
-        },
-        {
-            "year": "1977",
-            "value": 11800
-        },
-        {
-            "year": "1978",
-            "value": 17800
-        },
-        {
-            "year": "1979",
-            "value": 13800
-        },
-        {
             "year": "1980",
-            "value": 16800
+            "value": 2.7
         },
         {
             "year": "1981",
-            "value": 12800
+            "value": 4.6
         },
         {
             "year": "1982",
-            "value": 16800
+            "value": 12.5
         },
         {
             "year": "1983",
-            "value": 19800
+            "value": 19.9
         },
         {
             "year": "1984",
-            "value": 14800
+            "value": 26.6
         },
         {
             "year": "1985",
-            "value": 11800
+            "value": 39
         },
         {
             "year": "1986",
-            "value": 17800
+            "value": 56.3
         },
         {
             "year": "1987",
-            "value": 18800
+            "value": 72.9
         },
         {
             "year": "1988",
-            "value": 15800
+            "value": 92.6
         },
         {
             "year": "1989",
-            "value": 11800
+            "value": 135.5
         },
         {
             "year": "1990",
-            "value": 14800
+            "value": 172
         },
         {
             "year": "1991",
-            "value": 18800
+            "value": 236.9
         },
         {
             "year": "1992",
-            "value": 13800
+            "value": 335.7
         },
         {
             "year": "1993",
-            "value": 14800
+            "value": 506.3
         },
         {
             "year": "1994",
-            "value": 18800
+            "value": 667.2
         },
         {
             "year": "1995",
-            "value": 13800
+            "value": 842
         },
         {
             "year": "1996",
-            "value": 10800
+            "value": 1024.2
         },
         {
             "year": "1997",
-            "value": 11800
+            "value": 1265.9
         },
         {
             "year": "1998",
-            "value": 19800
+            "value": 1468.8
+        },
+        {
+            "year": "1999",
+            "value": 1778.6
+        },
+        {
+            "year": "2000",
+            "value": 2187
+        },
+        {
+            "year": "2001",
+            "value": 2569.5
+        },
+        {
+            "year": "2002",
+            "value": 3005.3
+        },
+        {
+            "year": "2003",
+            "value": 3486.9
+        },
+        {
+            "year": "2004",
+            "value": 4186.5
+        },
+        {
+            "year": "2005",
+            "value": 4951
+        },
+        {
+            "year": "2006",
+            "value": 5644.3
+        },
+        {
+            "year": "2007",
+            "value": 6855.9
+        },
+        {
+            "year": "2008",
+            "value": 7966.2
+        },
+        {
+            "year": "2009",
+            "value": 8844.6
+        },
+        {
+            "year": "2010",
+            "value": 9511
+        },
+        {
+            "year": "2011",
+            "value": 10523.3
+        },
+        {
+            "year": "2012",
+            "value": 12586.5
+        },
+        {
+            "year": "2013",
+            "value": 14859.7
+        },
+        {
+            "year": "2014",
+            "value": 16005.8
+        },
+        {
+            "year": "2015",
+            "value": 17896.1
+        },
+        {
+            "year": "2016",
+            "value": 19492
+        },
+        {
+            "year": "2017",
+            "value": 21813
+        },
+        {
+            "year": "2018",
+            "value": 24221.9
         }
     ];
 
@@ -344,43 +302,43 @@
 
     var chartData3 = [
         {
-            "country": "10岁-20岁",
-            "visits": 4025,
+            "country": "2017年第一季度",
+            "visits": 6.2,
             "pattern": {"url":"patterns/black/pattern21.png", "width":4, "height":4, "color":"#CC0000"}
         },
         {
-            "country": "20岁-30岁",
-            "visits": 1882,
+            "country": "2017年第二季度",
+            "visits": 6.8,
             "pattern": {"url":"patterns/black/pattern20.png", "width":4, "height":4}
         },
         {
-            "country": "10岁以下",
-            "visits": 1809,
+            "country": "2017年第三季度",
+            "visits": 7.1,
             "pattern": {"url":"patterns/black/pattern19.png", "width":4, "height":4}
         },
         {
-            "country": "30岁-40岁",
-            "visits": 1322,
+            "country": "2017年第四季度",
+            "visits": 7.8,
             "pattern": {"url":"patterns/black/pattern18.png", "width":4, "height":4}
         },
         {
-            "country": "50岁-60岁",
-            "visits": 1122,
+            "country": "2018年第一季度",
+            "visits": 5.9,
             "pattern": {"url":"patterns/black/pattern17.png", "width":4, "height":4}
         },
         {
-            "country": "70岁-80岁",
-            "visits": 1114,
+            "country": "2018年第二季度",
+            "visits": 7.2,
             "pattern": {"url":"patterns/black/pattern16.png", "width":4, "height":4}
         },
         {
-            "country": "40岁-50岁",
-            "visits": 984,
+            "country": "2018年第三季度",
+            "visits": 6.3,
             "pattern": {"url":"patterns/black/pattern15.png", "width":4, "height":4}
         },
         {
-            "country": "80岁以上",
-            "visits": 711,
+            "country": "2018年第四季度",
+            "visits": 6.8,
             "pattern": {"url":"patterns/black/pattern14.png", "width":4, "height":4}
         }
     ];

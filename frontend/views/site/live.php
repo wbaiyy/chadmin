@@ -11,58 +11,58 @@
                 <a class="navbar-brand" href="#">科室</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="开始时间"/> -
-                        <input type="text" class="form-control" placeholder="结束时间"/>
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <?php include('search.php'); ?>
 
         </nav>
     </div>
 </div>
 <div style="font-size:15px;">
+    <p style="margin-bottom: 20px;margin-top: 20px;">2018年经济各行业构成分布图</p>
     <div id="chartdiv" style="width: 700px; height: 500px;"></div>
+
+    <div class="" style="margin-top: 50px;">
+        <table class="table table-striped">
+            <caption>2018年各类型企业变化情况</caption>
+            <thead>
+            <tr>
+                <th>企业类型</th>
+                <th>数量</th>
+                <th>数量增长率（%）</th>
+                <th>经济占比（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>大型企业</td>
+                <td>187</td>
+                <td>2.6</td>
+                <td>36.5</td>
+            </tr>
+            <tr>
+                <td>中型企业</td>
+                <td>1269</td>
+                <td>7.1</td>
+                <td>40.4</td>
+            </tr>
+            <tr>
+                <td>小型企业</td>
+                <td>2415</td>
+                <td>10.2</td>
+                <td>20.1</td>
+            </tr>
+            <tr>
+                <td>微型企业</td>
+                <td>523</td>
+                <td>13.6</td>
+                <td>3.0</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <p style="margin-left: 10px;margin-top: 50px;margin-bottom: 10px;">2018年主要工业产品构成</p>
     <div id="chartdiv1" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 40px;margin-bottom: 20px;margin-top: 20px;">当天住院患者呼叫次数统计分布</p>
 
 </div>
 
@@ -72,32 +72,40 @@
     var chart;
     var data = [
         {
-            "title": "感冒住院",
-            "value": 200
+            "title": "工业",
+            "value": 9254.00
         },
         {
-            "title": "外伤住院",
-            "value": 123
+            "title": "其他服务业",
+            "value": 5411.53
         },
         {
-            "title": "产科住院",
-            "value": 98
+            "title": "金融业",
+            "value": 3067.21
         },
         {
-            "title": "内科住院",
-            "value": 72
+            "title": "批发和零售业",
+            "value": 2508.70
         },
         {
-            "title": "五官科住院",
-            "value": 65
+            "title": "房地产业",
+            "value": 2080.42
         },
         {
-            "title": "肿瘤住院",
-            "value": 45
+            "title": "交通运输、仓储和邮政业",
+            "value": 733.26
         },
         {
-            "title": "皮肤科住院",
-            "value": 36
+            "title": "建筑业",
+            "value": 724.46
+        },
+        {
+            "title": "住宿和餐饮业",
+            "value": 419.48
+        },
+        {
+            "title": "农林牧渔业",
+            "value": 22.92
         }
     ];
 
@@ -106,7 +114,7 @@
         chart = new AmCharts.AmFunnelChart();
         chart.rotate = true;
         chart.titleField = "title";
-        chart.balloon.fixedPosition = true;
+        chart.balloon.fixedPosition = false;
         chart.marginRight = 210;
         chart.marginLeft = 15;
         chart.labelPosition = "right";
@@ -123,89 +131,74 @@
         chart.write("chartdiv");
     });
 
+    var chartData1 = [
+        {
+            "country": "移动通信基站设备",
+            "visits": 44427
+        },
+        {
+            "country": "新能源汽车",
+            "visits": 999
+        },
+        {
+            "country": "卫星导航定位节手机",
+            "visits": 5471
+        },
+        {
+            "country": "移动通信手持机（手机）",
+            "visits": 30154
+        },
+        {
+            "country": "民用无人机",
+            "visits": 2490
+        },
+        {
+            "country": "工业机器人",
+            "visits": 2128
+        },
+        {
+            "country": "电视接收机顶盒",
+            "visits": 9842
+        },
+        {
+            "country": "半导体分立器件",
+            "visits": 98887
+        },
+        {
+            "country": "集成电路",
+            "visits": 185634
+        },
+        {
+            "country": "电子元件",
+            "visits": 241023
+        }
+    ];
 
-    var chartData = [];
 
     AmCharts.ready(function () {
-        // first we generate some random data
-        generateChartData();
+        // PIE CHART
+        chart = new AmCharts.AmPieChart();
 
-        // SERIAL CHART
-        chart = new AmCharts.AmSerialChart();
+        // title of the chart
+        chart.addTitle("单位（万件）", 16);
 
-        chart.dataProvider = chartData;
-        chart.categoryField = "date";
-
-        // data updated event will be fired when chart is first displayed,
-        // also when data will be updated. We'll use it to set some
-        // initial zoom
-        chart.addListener("dataUpdated", zoomChart);
-
-        // AXES
-        // Category
-        var categoryAxis = chart.categoryAxis;
-        categoryAxis.parseDates = true; // in order char to understand dates, we should set parseDates to true
-        categoryAxis.minPeriod = "mm"; // as we have data with minute interval, we have to set "mm" here.
-        categoryAxis.gridAlpha = 0.07;
-        categoryAxis.axisColor = "#DADADA";
-
-        // Value
-        var valueAxis = new AmCharts.ValueAxis();
-        valueAxis.gridAlpha = 0.07;
-        valueAxis.title = "Unique visitors";
-        chart.addValueAxis(valueAxis);
-
-        // GRAPH
-        var graph = new AmCharts.AmGraph();
-        graph.type = "line"; // try to change it to "column"
-        graph.title = "red line";
-        graph.valueField = "visits";
-        graph.lineAlpha = 1;
-        graph.lineColor = "#d1cf2a";
-        graph.fillAlphas = 0.3; // setting fillAlphas to > 0 value makes it area graph
-        chart.addGraph(graph);
-
-        // CURSOR
-        var chartCursor = new AmCharts.ChartCursor();
-        chartCursor.cursorPosition = "mouse";
-        chartCursor.categoryBalloonDateFormat = "JJ:NN, DD MMMM";
-        chart.addChartCursor(chartCursor);
-
-        // SCROLLBAR
-        var chartScrollbar = new AmCharts.ChartScrollbar();
-
-        chart.addChartScrollbar(chartScrollbar);
+        chart.dataProvider = chartData1;
+        chart.titleField = "country";
+        chart.valueField = "visits";
+        chart.sequencedAnimation = true;
+        chart.startEffect = "elastic";
+        chart.innerRadius = "30%";
+        chart.startDuration = 2;
+        chart.labelRadius = 15;
+        chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
+        // the following two lines makes the chart 3D
+        chart.depth3D = 10;
+        chart.angle = 15;
 
         // WRITE
         chart.write("chartdiv1");
     });
 
-    // generate some random data, quite different range
-    function generateChartData() {
-        // current date
-        var firstDate = new Date();
-        // now set 1000 minutes back
-        firstDate.setMinutes(firstDate.getDate() - 1000);
 
-        // and generate 1000 data items
-        for (var i = 0; i < 1000; i++) {
-            var newDate = new Date(firstDate);
-            // each time we add one minute
-            newDate.setMinutes(newDate.getMinutes() + i);
-            // some random number
-            var visits = Math.round(Math.random() * 40) + 10;
-            // add data item to the array
-            chartData.push({
-                date: newDate,
-                visits: visits
-            });
-        }
-    }
-
-    // this method is called when chart is first inited as we listen for "dataUpdated" event
-    function zoomChart() {
-        // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
-        chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
-    }
 </script>
 <?php $this->endBlock();?>

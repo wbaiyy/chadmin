@@ -12,51 +12,7 @@
                 <a class="navbar-brand" href="#">经济概览</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="开始时间"/> -
-                        <input type="text" class="form-control" placeholder="结束时间"/>
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">区域选择<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">福田区</a>
-                            </li>
-                            <li>
-                                <a href="#">南山区</a>
-                            </li>
-                            <li>
-                                <a href="#">罗湖区</a>
-                            </li>
-                            <li>
-                                <a href="#">宝安区</a>
-                            </li>
-                            <li>
-                                <a href="#">龙华区</a>
-                            </li>
-                            <li>
-                                <a href="#">龙岗区</a>
-                            </li>
-                            <li>
-                                <a href="#">坪山区</a>
-                            </li>
-                            <li>
-                                <a href="#">盐田区</a>
-                            </li>
-                        </ul>
-                    <li>
-                        <a href="#">导出数据</a>
-                    </li>
-                    </li>
-                </ul>
-            </div>
+            <?php include('search.php'); ?>
 
         </nav>
     </div>
@@ -67,6 +23,126 @@
         <div id="chartdiv1" style="width: 500px; height: 400px;position: relative;display: inline-block;vertical-align: top;"></div>
         <div id="chartdiv2" style="width: 500px; height: 400px;position: relative;display: inline-block;vertical-align: top;margin-left: 30px;"></div>
     </div>
+    <div class="" style="margin-top: 30px;">
+        <table class="table table-striped">
+            <caption>2018年分区地区生产总值</caption>
+            <thead>
+            <tr>
+                <th>区域</th>
+                <th>地区生产总值</th>
+                <th>地区生产年增长率</th>
+                <th>第一产业总值</th>
+                <th>第一产业增长率</th>
+                <th>第二产业总值</th>
+                <th>第二产业增长率</th>
+                <th>第三产业总值</th>
+                <th>第三产业增长率</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>全市</td>
+                <td>24221.98</td>
+                <td>7.6%</td>
+                <td>22.09</td>
+                <td>3.9%</td>
+                <td>9961.95</td>
+                <td>9.3%</td>
+                <td>14237.4</td>
+                <td>6.4%</td>
+            </tr>
+            <tr>
+                <td>福田区</td>
+                <td>4018.26</td>
+                <td>7.4%</td>
+                <td>1.63</td>
+                <td>-0.8%</td>
+                <td>238.56</td>
+                <td>10.8</td>
+                <td>3378.08</td>
+                <td>7.1%</td>
+            </tr>
+             <tr>
+                <td>罗湖区</td>
+                <td>2253.69</td>
+                <td>7.3%</td>
+                <td>1.31</td>
+                <td>-27.3%</td>
+                <td>81.65</td>
+                <td>2.2%</td>
+                <td>2170.74</td>
+                <td>7.5%</td>
+            </tr>
+             <tr>
+                <td>盐田区</td>
+                <td>612.76</td>
+                <td>7.1%</td>
+                <td>0.14</td>
+                <td>-19.4%</td>
+                <td>85.83</td>
+                <td>1.7</td>
+                <td>526.78</td>
+                <td>8.0</td>
+            </tr>
+             <tr>
+                 <td>南山区</td>
+                 <td>5018.36</td>
+                 <td>4.5%</td>
+                <td>1.07</td>
+                <td>8.7%</td>
+                <td>2045.70</td>
+                <td>0.2%</td>
+                <td>2971.45</td>
+                <td>9.1%</td>
+            </tr>
+             <tr>
+                <td>宝安区</td>
+                <td>3612.52</td>
+                <td>8.7%</td>
+                <td>1.36</td>
+                <td>30.9%</td>
+                <td>1840.87</td>
+                <td>8.3%</td>
+                <td>1769.4</td>
+                <td>9.0%</td>
+            </tr>
+             <tr>
+                <td>龙岗区</td>
+                <td>4287.86</td>
+                <td>11%</td>
+                <td>0.54</td>
+                <td>-2.7%</td>
+                <td>2974.56</td>
+                <td>15.9%</td>
+                <td>1312.32</td>
+                <td>0.8%</td>
+            </tr>
+             <tr>
+                <td>龙华区</td>
+                <td>2401.78</td>
+                <td>10.3%</td>
+                <td>2.09</td>
+                <td>4.9%</td>
+                <td>1201.95</td>
+                <td>11.3%</td>
+                <td>1137.4</td>
+                <td>9.6%</td>
+            </tr>
+             <tr>
+                <td>坪山区</td>
+                <td>701.66</td>
+                <td>10.1%</td>
+                <td>0.29</td>
+                <td>5.9%</td>
+                <td>201.15</td>
+                <td>9.3</td>
+                <td>496.89</td>
+                <td>11.23%</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
 
     <div id="chartdiv3" style="width:100%; height:400px;">
     </div>
@@ -74,6 +150,77 @@
 
 
     <div id="chartdiv4" style="width:100%; height:600px;"></div>
+
+    <div class="" style="margin-top: 30px;">
+        <table class="table table-striped">
+            <caption>2018年分区固定资产投资增长速度</caption>
+            <thead>
+            <tr>
+                <th>区域</th>
+                <th>固定资产投资比上年增长（%）</th>
+                <th>房地产开发投资比上年增长（%）</th>
+                <th>非房地产开发投资比上年增长（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>全市</td>
+                <td>20.6</td>
+                <td>23.6</td>
+                <td>18.4</td>
+            </tr>
+            <tr>
+                <td>福田区</td>
+                <td>24.1</td>
+                <td>11.1</td>
+                <td>47.2</td>
+            </tr>
+            <tr>
+                <td>罗湖区</td>
+                <td>22.9</td>
+                <td>25.3</td>
+                <td>20.1</td>
+            </tr>
+            <tr>
+                <td>盐田区</td>
+                <td>3.1</td>
+                <td>-13.4</td>
+                <td>11.6</td>
+            </tr>
+            <tr>
+                <td>南山区</td>
+                <td>21.6</td>
+                <td>26.6</td>
+                <td>18.9</td>
+            </tr>
+            <tr>
+                <td>宝安区</td>
+                <td>30.2</td>
+                <td>35.7</td>
+                <td>27.3</td>
+            </tr>
+            <tr>
+                <td>龙岗区</td>
+                <td>28.8</td>
+                <td>26.6</td>
+                <td>30.5</td>
+            </tr>
+            <tr>
+                <td>龙华区</td>
+                <td>20.9</td>
+                <td>21.1</td>
+                <td>20.6</td>
+            </tr>
+            <tr>
+                <td>坪山区</td>
+                <td>18,9</td>
+                <td>29.2</td>
+                <td>10</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
 </div>
 
 
