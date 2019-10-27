@@ -17,7 +17,7 @@
     </div>
 </div>
 <div style="font-size:15px;">
-    <p style="margin-bottom: 20px;margin-top: 20px;">2018年经济各行业构成分布图</p>
+    <p style="margin-bottom: 20px;margin-top: 20px;">2018年经济各行业构成分布图（亿元）</p>
     <div id="chartdiv" style="width: 700px; height: 500px;"></div>
 
     <div class="" style="margin-top: 50px;">

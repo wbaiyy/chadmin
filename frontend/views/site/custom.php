@@ -60,116 +60,88 @@
     </div>
 </div>
 <div style="font-size:15px;">
+    <p style="margin-left: 10px;margin-bottom: -10px;"><b>2018年各行业增长率排名</b></p>
     <div id="chartdiv1" style="width: 600px; height: 400px;"></div>
-    <p style="margin-left: 150px;margin-bottom: 20px;">医职员教育背景分布图</p>
 
-    <div id="chartdiv" style="width: 1200px; height: 400px;"></div>
-    <p style="margin-left: 50px;margin-bottom: 20px;">医职员年龄和入职时间分布图</p>
+    <div class="" style="margin-top: 50px;">
+        <table class="table table-striped">
+            <caption><b>2018年各行业产值及增量数据</b></caption>
+            <thead>
+            <tr>
+                <th>行业类型</th>
+                <th>产量/产值</th>
+                <th>增长率（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>农业</td>
+                <td>18.93万亩</td>
+                <td>5.6</td>
+            </tr>
+            <tr>
+                <td>工业和建筑业</td>
+                <td>9254.00亿元</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>国内贸易</td>
+                <td>6168.87亿元</td>
+                <td>7.6</td>
+            </tr>
+            <tr>
+                <td>对外经济</td>
+                <td>29983.74亿元</td>
+                <td>7.0</td>
+            </tr>  
+            <tr>
+                <td>交通、邮电与旅游</td>
+                <td>32763.63万吨</td>
+                <td>1.5</td>
+            </tr>
+            <tr>
+                <td>金融、证券和保险</td>
+                <td>72550.36亿元</td>
+                <td>4.1</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+ <p style="margin-left: 10px;margin-top: 50px;margin-bottom: 10px;"><b>近2年各季度经济增长排行图（%）</b></p>
+    <div id="chartdiv3" style="width: 100%; height: 400px;"></div>
 
 </div>
 
 
 <?php $this->beginBlock('footer');  ?>
 <script>
-    var chart;
-
-    var chartData = [
-        {
-            "x": 18,
-            "y": 1,
-            "value": 59
-        },
-        {
-            "x": 24,
-            "y": 2,
-            "value": 50
-        },
-        {
-            "x": 30,
-            "y": 3,
-            "value": 19
-        },
-        {
-            "x": 36,
-            "y": 4,
-            "value": 65
-        },
-        {
-            "x": 42,
-            "y": 5,
-            "value": 92
-        },
-        {
-            "x": 48,
-            "y": 6,
-            "value": 8
-        },
-        {
-            "x": 54,
-            "y": 7,
-            "value": 35
-        }
-    ];
-
-    AmCharts.ready(function () {
-        // XY Chart
-        chart = new AmCharts.AmXYChart();
-        chart.dataProvider = chartData;
-        chart.startDuration = 1.5;
-
-        // AXES
-        // X
-        var xAxis = new AmCharts.ValueAxis();
-        xAxis.title = "年龄";
-        xAxis.position = "bottom";
-        xAxis.autoGridCount = true;
-        chart.addValueAxis(xAxis);
-
-        // Y
-        var yAxis = new AmCharts.ValueAxis();
-        yAxis.title = "入职时间";
-        yAxis.position = "left";
-        yAxis.autoGridCount = true;
-        chart.addValueAxis(yAxis);
-
-        // GRAPH
-        var graph = new AmCharts.AmGraph();
-        graph.valueField = "value"; // valueField responsible for the size of a bullet
-        graph.xField = "x";
-        graph.yField = "y";
-        graph.lineAlpha = 0;
-        graph.bullet = "bubble";
-        graph.balloonText = "x:<b>[[x]]</b> y:<b>[[y]]</b><br>value:<b>[[value]]</b>"
-        chart.addGraph(graph);
-
-        // WRITE
-        chart.write("chartdiv");
-    });
-
+     
     var chartData1 = [
         {
-            "country": "本科",
-            "litres": 156.9
+            "country": "农业",
+            "litres": 5.6
         },
         {
-            "country": "硕士",
-            "litres": 131.1
+            "country": "工业和建筑业",
+            "litres": 9.0
         },
         {
-            "country": "教授",
-            "litres": 115.8
+            "country": "国内贸易",
+            "litres": 7.6
         },
         {
-            "country": "专科",
-            "litres": 109.9
+            "country": "对外经济",
+            "litres": 7.0
         },
         {
-            "country": "博士",
-            "litres": 108.3
+            "country": "交通、邮电与旅游",
+            "litres": 1.5
         },
         {
-            "country": "博士后",
-            "litres": 70
+            "country": "金融、证券和保险",
+            "litres": 4.5
         }
     ];
 
@@ -198,6 +170,97 @@
 
         // WRITE
         chart.write("chartdiv1");
+    });
+
+
+
+
+
+ var chartData3 = [
+        {
+            "country": "2017年第一季度",
+            "visits": 6.2,
+            "pattern": {"url":"patterns/black/pattern21.png", "width":4, "height":4, "color":"#CC0000"}
+        },
+        {
+            "country": "2017年第二季度",
+            "visits": 6.8,
+            "pattern": {"url":"patterns/black/pattern20.png", "width":4, "height":4}
+        },
+        {
+            "country": "2017年第三季度",
+            "visits": 7.1,
+            "pattern": {"url":"patterns/black/pattern19.png", "width":4, "height":4}
+        },
+        {
+            "country": "2017年第四季度",
+            "visits": 7.8,
+            "pattern": {"url":"patterns/black/pattern18.png", "width":4, "height":4}
+        },
+        {
+            "country": "2018年第一季度",
+            "visits": 5.9,
+            "pattern": {"url":"patterns/black/pattern17.png", "width":4, "height":4}
+        },
+        {
+            "country": "2018年第二季度",
+            "visits": 7.2,
+            "pattern": {"url":"patterns/black/pattern16.png", "width":4, "height":4}
+        },
+        {
+            "country": "2018年第三季度",
+            "visits": 6.3,
+            "pattern": {"url":"patterns/black/pattern15.png", "width":4, "height":4}
+        },
+        {
+            "country": "2018年第四季度",
+            "visits": 6.8,
+            "pattern": {"url":"patterns/black/pattern14.png", "width":4, "height":4}
+        }
+    ];
+
+
+    AmCharts.ready(function () {
+        // SERIAL CHART
+        chart = new AmCharts.AmSerialChart();
+
+        chart.dataProvider = chartData3;
+        chart.categoryField = "country";
+
+        // AXES
+        // category
+        var categoryAxis = chart.categoryAxis;
+        categoryAxis.gridAlpha = 0;
+        categoryAxis.axisAlpha = 0;
+        categoryAxis.gridPosition = "start";
+
+        // value
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.axisAlpha = 0;
+        valueAxis.gridAlpha = 0;
+        chart.addValueAxis(valueAxis);
+
+        // GRAPH
+        var graph = new AmCharts.AmGraph();
+        graph.valueField = "visits";
+        graph.balloonText = "[[category]]: <b>[[value]]</b>";
+        graph.type = "column";
+        graph.lineAlpha = 0;
+        graph.lineColor = "#000000";
+        graph.fillAlphas = 0.8;
+        graph.patternField = "pattern";
+        chart.addGraph(graph);
+
+        // CURSOR
+        var chartCursor = new AmCharts.ChartCursor();
+        chartCursor.cursorAlpha = 0;
+        chartCursor.zoomable = false;
+        chartCursor.categoryBalloonEnabled = false;
+        chart.addChartCursor(chartCursor);
+
+        chart.creditsPosition = "top-right";
+
+        chart.write("chartdiv3");
     });
 </script>
 <?php $this->endBlock();?>

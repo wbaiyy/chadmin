@@ -60,10 +60,75 @@
     </div>
 </div>
 <div style="font-size:15px;">
+    <div class="" style="margin-top: 50px;">
+        <table class="table table-striped">
+            <caption>2018年前十大行业工业增加值数据</caption>
+            <thead>
+            <tr>
+                <th>行业类型</th>
+                <th>增长率（%）</th>
+                <th>经济占比（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>计算机、通信和其他电子设备</td>
+                <td>14</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>电气机械和器材</td>
+                <td>-2.6</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>专用设备</td>
+                <td>10.0</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>电力、热力生产和供应业</td>
+                <td>3.0</td>
+                <td>6.3</td>
+            </tr> 
+            <tr>
+                <td>石油和天然气开采业</td>
+                <td>-12.5</td>
+                <td>5.2</td>
+            </tr>
+                <tr>
+                <td>橡胶和塑料制品业</td>
+                <td>15.6</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>通用设备制造业</td>
+                <td>2.2</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>金属制品业</td>
+                <td>0.5</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>汽车制造业</td>
+                <td>12.4</td>
+                <td>3.6</td>
+            </tr> 
+            <tr>
+                <td>医药制造业</td>
+                <td>25</td>
+                <td>2.6</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div id="chartdiv" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 520px;margin-bottom: 20px;margin-top: 10px;">当年药品种类使用分布</p>
+
+    <p style="margin-left: 40px;margin-bottom: 10px;margin-top: 50px;">2018不同所有制类型经济情况</p>
     <div id="chartdiv1" style="width: 100%; height: 600px;"></div>
-    <p style="margin-left: 40px;margin-bottom: 20px;margin-top: 10px;">各年份药品进货和使用量统计</p>
 
 </div>
 
@@ -73,36 +138,45 @@
     var chart;
     var chartData = [
         {
-            "country": "感冒咳嗽",
-            "visits": 9252
+            "country": "计算机、通信和其他电子设备",
+            "visits": 14
         },
         {
-            "country": "胃痛胃胀",
-            "visits": 1882
+            "country": "电气机械和器材",
+            "visits": -2.6
         },
         {
-            "country": "痔疮",
-            "visits": 1809
+            "country": "专用设备",
+            "visits": 10
         },
         {
-            "country": "消化不良",
-            "visits": 1322
+            "country": "电力、热力生产和供应业",
+            "visits": 3.0
         },
         {
-            "country": "腹泻便秘",
-            "visits": 1122
+            "country": "石油和天然气开采业",
+            "visits": -12.5
         },
         {
-            "country": "头痛发热",
-            "visits": 1114
+            "country": "橡胶和塑料制品业",
+            "visits": 15.5
         },
         {
-            "country": "妇科炎症",
-            "visits": 984
+            "country": "通用设备制造业",
+            "visits": 2.2
         },
         {
-            "country": "五官眼药水",
-            "visits": 711
+            "country": "金属制品业",
+            "visits": 0.5
+        }
+,
+        {
+            "country": "汽车制造业",
+            "visits": 12.4
+        },
+        {
+            "country": "医药制造业",
+            "visits": 25
         }
     ];
 
@@ -112,7 +186,7 @@
         chart = new AmCharts.AmPieChart();
 
         // title of the chart
-        chart.addTitle("Visitors countries", 16);
+        chart.addTitle("2018年前十大行业工业增加率对比图", 16);
 
         chart.dataProvider = chartData;
         chart.titleField = "country";
@@ -135,30 +209,31 @@
 
     var chartData1 = [
         {
-            "year": 2005,
-            "income": 123.5,
-            "expenses": 118.1
+            "year": "国有企业",
+            "income": 30.1,
+            "expenses": 5.6
         },
         {
-            "year": 2006,
-            "income": 126.2,
-            "expenses": 122.8
+            "year": "集体企业",
+            "income": 35.5,
+            "expenses": 7.5
         },
         {
-            "year": 2007,
-            "income": 130.1,
-            "expenses": 123.9
+            "year": "股份制企业",
+            "income": 26.9,
+            "expenses": 12.8
         },
         {
-            "year": 2008,
-            "income": 129.5,
-            "expenses": 125.1
+            "year": "外商及港澳台商投资企业",
+            "income": 8.8,
+            "expenses": 7.6
         },
         {
-            "year": 2009,
-            "income": 124.6,
-            "expenses": 125
-        }
+            "year": "其他企业",
+            "income": 4.8,
+            "expenses": 8.6
+        },
+     
     ];
 
 
@@ -182,7 +257,7 @@
         valueAxis.dashLength = 3;
         valueAxis.axisAlpha = 0.2;
         valueAxis.position = "top";
-        valueAxis.title = "人民币/w";
+        valueAxis.title = "比例/%";
         valueAxis.minorGridEnabled = true;
         valueAxis.minorGridAlpha = 0.08;
         valueAxis.gridAlpha = 0.15;
@@ -192,7 +267,7 @@
         // column graph
         var graph1 = new AmCharts.AmGraph();
         graph1.type = "column";
-        graph1.title = "药品进货";
+        graph1.title = "2018年增长率";
         graph1.valueField = "income";
         graph1.lineAlpha = 0;
         graph1.fillColors = "#ADD981";
@@ -208,7 +283,7 @@
         graph2.bulletBorderColor = "#27c5ff";
         graph2.bulletBorderThickness = 2;
         graph2.bulletBorderAlpha = 1;
-        graph2.title = "药品使用";
+        graph2.title = "2018年经济占比";
         graph2.valueField = "expenses";
         graph2.lineThickness = 2;
         graph2.bullet = "round";
