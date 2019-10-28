@@ -8,52 +8,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">科室</a>
+                <a class="navbar-brand" href="#">对比分析</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php include('search.php'); ?>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="开始时间"/> -
-                        <input type="text" class="form-control" placeholder="结束时间"/>
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">对比对象<strong class="caret"></strong></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">性别</a>
+                                <a href="#">行业类型</a>
                             </li>
                             <li>
-                                <a href="#">病人来源</a>
+                                <a href="#">企业制度</a>
                             </li>
                             <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
+                                <a href="#">企业规模</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
+                <?php include('common.php'); ?>
+
             </div>
 
         </nav>

@@ -8,10 +8,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">科室</a>
+                <a class="navbar-brand" href="#">构成分析</a>
             </div>
 
             <?php include('search.php'); ?>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+                <?php include('common.php'); ?>
+            </div>
 
         </nav>
     </div>

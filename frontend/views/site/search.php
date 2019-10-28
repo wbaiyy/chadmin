@@ -22,7 +22,21 @@
                     <a href="#">环比</a>
                 </li>
             </ul>
-        <li>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">次要口径<strong class="caret"></strong></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">企业规模</a>
+                </li>
+                <li>
+                    <a href="#">企业制度类型</a>
+                </li>
+                <li>
+                    <a href="#">企业生产类型</a>
+                </li>
+            </ul>
+        </li>
         <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">指标属性<strong class="caret"></strong></a>
             <ul class="dropdown-menu">
@@ -37,6 +51,17 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">排序规则<strong class="caret"></strong></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">正序</a>
+                </li>
+                <li>
+                    <a href="#">反序</a>
+                </li>
+            </ul>
+        </li>
     </ul>
     <form class="navbar-form navbar-left" role="search">
 请选择时间：
@@ -46,37 +71,4 @@
         </div>
         <button type="submit" class="btn btn-default">分析</button>
     </form>
-    <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">区域选择<strong class="caret"></strong></a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#">福田区</a>
-                </li>
-                <li>
-                    <a href="#">南山区</a>
-                </li>
-                <li>
-                    <a href="#">罗湖区</a>
-                </li>
-                <li>
-                    <a href="#">宝安区</a>
-                </li>
-                <li>
-                    <a href="#">龙华区</a>
-                </li>
-                <li>
-                    <a href="#">龙岗区</a>
-                </li>
-                <li>
-                    <a href="#">坪山区</a>
-                </li>
-                <li>
-                    <a href="#">盐田区</a>
-                </li>
-            </ul>
-        <li>
-            <a href="#">导出数据</a>
-        </li>
-    </ul>
 </div>

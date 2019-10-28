@@ -8,59 +8,80 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">科室</a>
+                <a class="navbar-brand" href="#">关联分析</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php include('search.php'); ?>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="开始时间"/> -
-                        <input type="text" class="form-control" placeholder="结束时间"/>
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据类型<strong class="caret"></strong></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">性别</a>
+                                <a href="#">本地区</a>
                             </li>
                             <li>
-                                <a href="#">病人来源</a>
+                                <a href="#">本行业</a>
                             </li>
                             <li>
-                                <a href="#">年龄段</a>
+                                <a href="#">同制度</a>
                             </li>
-                            <li class="号别">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">自变量<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">能源指标</a>
                             </li>
                             <li>
-                                <a href="#">费别</a>
+                                <a href="#">效率指标</a>
+                            </li>
+                            <li>
+                                <a href="#">潜力指标</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">指标<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">用电量</a>
+                            </li>
+                            <li>
+                                <a href="#">能耗</a>
+                            </li>
+                            <li>
+                                <a href="#">运输</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">属性<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">数量</a>
+                            </li>
+                            <li>
+                                <a href="#">产量</a>
+                            </li>
+                            <li>
+                                <a href="#">成长率</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
+                <?php include('common.php'); ?>
+
             </div>
 
         </nav>
     </div>
 </div>
 <div style="font-size:15px;">
-    <p style="margin-left: 10px;margin-bottom: 10px;margin-top: 10px;"><b>年份月份经济增长关联图</b></p>
+    <p style="margin-left: 10px;margin-bottom: 10px;margin-top: 10px;"><b>年份月份经济增长关联图（残差分析图）</b></p>
     <div id="chartdiv" style="width:100%; height:400px;"></div>
     
     <div class="" style="margin-top: 50px;">
@@ -129,7 +150,7 @@
         </table>
     </div>
 
-    <p style="margin-bottom: 10px;margin-top: 50px;"><b>经济总量和进出口关系时间图</b></p>
+    <p style="margin-bottom: 10px;margin-top: 50px;"><b>经济总量和进出口关系时间图（模型拟合）</b></p>
     <div id="chartdiv1" style="width: 1200px; height: 400px;"></div>
 <div style="float:right;margin-right:20px;">
         <input onChange="changeZoomDates()" style="width:100px; text-align:center"
