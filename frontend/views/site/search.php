@@ -66,8 +66,8 @@
     <form class="navbar-form navbar-left" role="search">
 请选择时间：
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="开始时间"/> -
-            <input type="text" class="form-control" placeholder="结束时间"/>
+            <input type="text" class="form-control" placeholder="2018-01-01"/> -
+            <input type="text" class="form-control" placeholder="2019-01-01"/>
         </div>
         <button type="submit" class="btn btn-default">分析</button>
     </form>

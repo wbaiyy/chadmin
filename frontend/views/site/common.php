@@ -9,31 +9,31 @@
 
 <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">区域选择<strong class="caret"></strong></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">深圳市<strong class="caret"></strong></a>
         <ul class="dropdown-menu">
             <li>
-                <a href="#">福田区</a>
+                <a href="#">北京市</a>
             </li>
             <li>
-                <a href="#">南山区</a>
+                <a href="#">上海市</a>
             </li>
             <li>
-                <a href="#">罗湖区</a>
+                <a href="#">广州市</a>
             </li>
             <li>
-                <a href="#">宝安区</a>
+                <a href="#">杭州市</a>
             </li>
             <li>
-                <a href="#">龙华区</a>
+                <a href="#">天津市</a>
             </li>
             <li>
-                <a href="#">龙岗区</a>
+                <a href="#">重庆市</a>
             </li>
             <li>
-                <a href="#">坪山区</a>
+                <a href="#">武汉市</a>
             </li>
             <li>
-                <a href="#">盐田区</a>
+                <a href="#">南京市</a>
             </li>
         </ul>
     <li>

@@ -13,6 +13,10 @@
             </div>
 
             <?php include('search.php'); ?>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+                <?php include('common.php'); ?>
+            </div>
 
         </nav>
     </div>

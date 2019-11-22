@@ -37,25 +37,25 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             //['label' => '首页', 'url' => ['/site/index']],
-            ['label' => '首页', 'url' => ['/site/index']],
-            ['label' => '趋势分析', 'url' => ['/site/door']],
-            ['label' => '构成分析', 'url' => ['/site/live']],
-            ['label' => '对比分析', 'url' => ['/site/medicinal']],
-            ['label' => '关联分析', 'url' => ['/site/equipment']],
-            ['label' => '排名分析', 'url' => ['/site/custom']],
-            ['label' => '下载数据', 'url' => ['/site/export']],
-            Yii::$app->user->isGuest ? (
-            ['label' => '登录', 'url' => ['/site/login']]
+            1 ? (
+            ['label' => '系统登录', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
                 . Html::submitButton(
-                    'Logout (' . "你好， admin". ')',
+                    '登出(' . "你好， admin". ')',
                     ['class' => 'btn btn-link']
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            ),
+            ['label' => '数据上传', 'url' => ['/site/export']],
+            ['label' => '系统首页展示', 'url' => ['/site/index']],
+            ['label' => '预测变化分析', 'url' => ['/site/door']],
+            ['label' => '合理性分析', 'url' => ['/site/live']],
+            ['label' => '对比分析', 'url' => ['/site/medicinal']],
+            ['label' => '排名分析', 'url' => ['/site/custom']],
+            //['label' => '关联分析', 'url' => ['/site/equipment']],
         ],
     ]);
     NavBar::end();
@@ -73,7 +73,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
-        <p class="pull-right">广元第一人民医院</p>
+        <p class="pull-right">地区经济运行分析预测系统</p>
     </div>
 </footer>
 
