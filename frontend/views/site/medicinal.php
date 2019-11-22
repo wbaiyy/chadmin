@@ -1,69 +1,153 @@
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
                     请选择时间：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    选择药品类型：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>进口</option>
+                        <option>国产</option>
+                        <option>其他</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    选择使用的科室：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>外科</option>
+                        <option>内科</option>
+                        <option>五官科</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
                     <button type="submit" class="btn btn-default">搜索</button>
+                    <button type="submit" class="btn btn-default">重置</button>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
+
+
 <div style="font-size:15px;">
+    <div class="" style="margin-top: 120px;">
+        <table class="table table-striped">
+            <caption><b>当前时间各类型药品使用分布统计</b></caption>
+            <thead>
+            <tr>
+                <th>药品类型</th>
+                <th>使用数量</th>
+                <th>使用占例</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>感冒咳嗽型</td>
+                <td>9252</td>
+                <td>47.68%</td>
+
+            </tr>
+            <tr>
+                <td>胃药型</td>
+                <td>1882</td>
+                <td>9.70%</td>
+            </tr>
+            <tr>
+                <td>消化不良型</td>
+                <td>1322</td>
+                <td>9.32%</td>
+            </tr>
+            <tr>
+                <td>腹泻便秘型</td>
+                <td>1122</td>
+                <td>5.78%</td>
+            <tr>
+                <td>头痛发热型</td>
+                <td>1114</td>
+                <td>5.74%</td>
+            </tr>
+            <tr>
+                <td>妇科炎症型</td>
+                <td>984</td>
+                <td>5.07%</td>
+            </tr>
+            <tr>
+                <td>五官眼药水型</td>
+                <td>711</td>
+                <td>3.66%</td>
+            </tr>
+            <tr>
+                <td>保健型</td>
+                <td>655</td>
+                <td>3.38%</td>
+            </tr>
+            <tr>
+                <td>痔疮</td>
+                <td>555</td>
+                <td>9.32%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 520px;margin-bottom: 20px;margin-top: 10px;">当年药品种类使用分布</p>
+
+
+    <div style="font-size:15px;">
+        <div class="" style="margin-top: 120px;">
+            <table class="table table-striped">
+                <caption><b>药品库存和进货分布统计(单位K)</b></caption>
+                <thead>
+                <tr>
+                    <th>月份</th>
+                    <th>进货数量</th>
+                    <th>使用数量</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>一月</td>
+                    <td>123.5</td>
+                    <td>120.1</td>
+
+                </tr>
+                <tr>
+                    <td>二月</td>
+                    <td>126.2</td>
+                    <td>122.8</td>
+                </tr>
+                <tr>
+                    <td>三月</td>
+                    <td>130.1</td>
+                    <td>123.9</td>
+                </tr>
+                <tr>
+                    <td>四月</td>
+                    <td>135.5</td>
+                    <td>129.9</td>
+                <tr>
+                    <td>五月</td>
+                    <td>136.6</td>
+                    <td>131</td>
+                </tr>
+                <tr>
+                    <td>六月</td>
+                    <td>139.6</td>
+                    <td>135</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     <div id="chartdiv1" style="width: 100%; height: 600px;"></div>
-    <p style="margin-left: 40px;margin-bottom: 20px;margin-top: 10px;">各年份药品进货和使用量统计</p>
 
 </div>
 
@@ -103,6 +187,14 @@
         {
             "country": "五官眼药水",
             "visits": 711
+        },
+        {
+            "country": "保健型",
+            "visits": 655
+        },
+        {
+            "country": "口腔型",
+            "visits": 555
         }
     ];
 
@@ -135,29 +227,34 @@
 
     var chartData1 = [
         {
-            "year": 2005,
+            "year": "一月",
             "income": 123.5,
-            "expenses": 118.1
+            "expenses": 120.1
         },
         {
-            "year": 2006,
+            "year": "二月",
             "income": 126.2,
             "expenses": 122.8
         },
         {
-            "year": 2007,
+            "year":  "三月",
             "income": 130.1,
             "expenses": 123.9
         },
         {
-            "year": 2008,
-            "income": 129.5,
-            "expenses": 125.1
+            "year":  "四月",
+            "income": 135.5,
+            "expenses": 129.9
         },
         {
-            "year": 2009,
-            "income": 124.6,
-            "expenses": 125
+            "year":  "五月",
+            "income": 136.6,
+            "expenses": 131
+        },
+        {
+            "year":  "六月",
+            "income": 139.6,
+            "expenses": 135
         }
     ];
 
@@ -182,7 +279,7 @@
         valueAxis.dashLength = 3;
         valueAxis.axisAlpha = 0.2;
         valueAxis.position = "top";
-        valueAxis.title = "人民币/w";
+        valueAxis.title = "单位/K";
         valueAxis.minorGridEnabled = true;
         valueAxis.minorGridAlpha = 0.08;
         valueAxis.gridAlpha = 0.15;

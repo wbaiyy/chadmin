@@ -1,77 +1,262 @@
 <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
+                    请选择年份：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    &nbsp;&nbsp;&nbsp;
+                    选择诊别：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>复苏急救</option>
+                        <option>危急</option>
+                        <option>紧急</option>
+                        <option>次紧急</option>
+                        <option>非紧急</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+                    选择科室：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>外科</option>
+                        <option>内科</option>
+                        <option>放射科</option>
+                        <option>妇科</option>
+                        <option>儿科</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+                    选择挂号方式：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>在线</option>
+                        <option>人工</option>
+                        <option>电话</option>
+
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+                    <div style="margin-top: 10px;">
+
+
+                        <button type="submit" class="btn btn-default">搜索</button>
+                        <button type="submit" class="btn btn-default">重置</button>
+                    </div>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
 
-<div style="font-size:15px;">
+<div style="font-size:15px;margin-top: 120px">
+    <div class="" style="">
+        <table class="table table-striped">
+            <caption><b>各年份医院总收入及支出（单位万元）</b></caption>
+            <thead>
+            <tr>
+                <th>年份</th>
+                <th>收入</th>
+                <th>支出</th>
+                <th>收支增幅比</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2009</td>
+                <td>2300.5</td>
+                <td>1800.1</td>
+                <td>10.3%</td>
+            </tr>
+            <tr>
+                <td>2010</td>
+                <td>2601.2</td>
+                <td> 2265.8</td>
+                <td>12.8%</td>
+            </tr>
+            <tr>
+                <td>2011</td>
+                <td>3023.1</td>
+                <td>2389.9</td>
+                <td>11.8%</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>2949.5</td>
+                <td>2556.1</td>
+                <td>11.5%</td>
+            <tr>
+                <td>2013</td>
+                <td>3556.6</td>
+                <td>3269.9</td>
+                <td>16.2%</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>4009.6</td>
+                <td>3811.2</td>
+                <td>13.1%</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>4308</td>
+                <td>4021.8</td>
+                <td>9.1%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div style="width:100%;display: inline-block">
         <div id="chartdiv1" style="width: 500px; height: 400px;position: relative;display: inline-block;vertical-align: top;"></div>
         <div id="chartdiv2" style="width: 500px; height: 400px;position: relative;display: inline-block;vertical-align: top;margin-left: 30px;"></div>
     </div>
 
+
+
+    <div class="" style="margin-top: 120px">
+        <table class="table table-striped">
+            <caption><b>各年份病人数统计（单位人次）</b></caption>
+            <thead>
+            <tr>
+                <th>年份</th>
+                <th>人次</th>
+                <th>职工数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2005</td>
+                <td>26002</td>
+                <td>320</td>
+            </tr>
+            <tr>
+                <td>2006</td>
+                <td>27012</td>
+                <td>365</td>
+            </tr>
+            <tr>
+                <td>2007</td>
+                <td>27902</td>
+                <td>378</td>
+            </tr>
+              <tr>
+                <td>2008</td>
+                <td>28002</td>
+                  <td>401</td>
+            </tr>
+              <tr>
+                <td>2009</td>
+                <td>32200</td>
+                  <td>426</td>
+            </tr>
+              <tr>
+                <td>2010</td>
+                <td>36389</td>
+                  <td>439</td>
+            </tr>
+              <tr>
+                <td>2011</td>
+                <td>30689</td>
+                  <td>469</td>
+            </tr>
+              <tr>
+                <td>2012</td>
+
+                <td>31810</td>
+                  <td>479</td>
+            </tr>
+              <tr>
+                <td>2013</td>
+                <td>32968</td>
+                  <td>491</td>
+            </tr>
+              <tr>
+                <td>2014</td>
+                <td>34968</td>
+                  <td>506</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv3" style="width:100%; height:400px;">
     </div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份病人数分布</p>
 
 
+    <div class="" style="margin-top: 120px">
+    <table class="table table-striped">
+        <caption><b>医用设备使用次数统计</b></caption>
+        <thead>
+        <tr>
+            <th>年份</th>
+            <th>使用次数</th>
+            <th>维修次数</th>
+            <th>新增数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2007</td>
+            <td> 30.1千次</td>
+            <td>43</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>2008</td>
+            <td>29.5千次</td>
+            <td>46</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>2009</td>
+            <td>34.6千次</td>
+            <td>52</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>2010</td>
+
+            <td>38.6千次</td>
+            <td>56</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>2011</td>
+            <td>40.3千次</td>
+            <td>70</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2012</td>
+            <td>41.4千次</td>
+            <td>72</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>2013</td>
+            <td>44.7千次</td>
+            <td>86</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>2014</td>
+            <td>46千次</td>
+            <td>76</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>2015</td>
+            <td>48.3千次</td>
+            <td>95</td>
+            <td>19</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
     <div id="chartdiv4" style="width:100%; height:600px;"></div>
 </div>
 
@@ -110,26 +295,37 @@
             type: "serial",
             theme: theme,
             dataProvider: [{
-                "year": 2005,
-                "医院收入": 23.5,
-                "医院支出": 18.1
-            }, {
-                "year": 2006,
-                "医院收入": 26.2,
-                "医院支出": 22.8
-            }, {
-                "year": 2007,
-                "医院收入": 30.1,
-                "医院支出": 23.9
-            }, {
-                "year": 2008,
-                "医院收入": 29.5,
-                "医院支出": 25.1
-            }, {
                 "year": 2009,
-                "医院收入": 24.6,
-                "医院支出": 25
-            }],
+                "医院收入": 2300.5,
+                "医院支出": 1800.1
+            }, {
+                "year": 2010,
+                "医院收入": 2601.2,
+                "医院支出": 2265.8
+            }, {
+                "year": 2011,
+                "医院收入": 3023.1,
+                "医院支出": 2389.9
+            }, {
+                "year": 2012,
+                "医院收入": 2949.5,
+                "医院支出": 2556.1
+            }, {
+                "year": 2013,
+                "医院收入": 3556.6,
+                "医院支出": 3269.9
+            },
+            {
+                "year": 2014,
+                "医院收入": 4009.6,
+                "医院支出": 3811.2
+            },
+            {
+                "year": 2015,
+                "医院收入": 4308,
+                "医院支出":4021.8
+            }
+            ],
             categoryField: "year",
             startDuration: 1,
 
@@ -137,7 +333,7 @@
                 gridPosition: "start"
             },
             valueAxes: [{
-                title: "医院收支统计"
+                title: "医院收支统计(单位W)"
             }],
             graphs: [{
                 type: "column",
@@ -202,69 +398,53 @@
     // months in JS are zero-based, 0 means January
     var chartData = [
         {
-            "year": "1995",
-            "value": 16002
-        },
-        {
-            "year": "1996",
-            "value": 17012
-        },
-        {
-            "year": "1997",
-            "value": 17902
-        },
-        {
-            "year": "1998",
-            "value": 18002
-        },
-        {
-            "year": "1999",
-            "value": 20000
-        },
-        {
-            "year": "2000",
-            "value": 20389
-        },
-        {
-            "year": "2001",
-            "value": 20689
-        },
-        {
-            "year": "2002",
-            "value": 21810
-        },
-        {
-            "year": "2003",
-            "value": 22968
-        },
-        {
-            "year": "2004",
-            "value": 24968
-        },
-        {
             "year": "2005",
-            "value": 21968
+            "value": 26002
         },
         {
             "year": "2006",
-            "value": 18689
+            "value": 27012
         },
         {
             "year": "2007",
-            "value": 23123
+            "value": 27902
         },
         {
             "year": "2008",
-            "value": 18968
+            "value": 28002
         },
         {
             "year": "2009",
-            "value": 19001
+            "value": 32200
         },
         {
             "year": "2010",
-            "value": 29001
-        }
+            "value": 36389
+        },
+        {
+            "year": "2011",
+            "value": 30689
+        },
+        {
+            "year": "2012",
+            "value": 31810
+        },
+        {
+            "year": "2013",
+            "value": 32968
+        },
+        {
+            "year": "2014",
+            "value": 34968
+        },
+        {
+            "year": "2015",
+            "value": 31968
+        },
+        {
+            "year": "2016",
+            "value": 38689
+        },
     ];
 
 
@@ -325,14 +505,6 @@
 
     var chartData1 = [
         {
-            "year": 2005,
-            "income": 23.5
-        },
-        {
-            "year": 2006,
-            "income": 26.2
-        },
-        {
             "year": 2007,
             "income": 30.1
         },
@@ -343,7 +515,31 @@
         {
             "year": 2009,
             "income": 34.6
-        }
+        },
+        {
+            "year": 2010,
+            "income": 37.1
+        },
+        {
+            "year": 2011,
+            "income": 40.3
+        },
+        {
+            "year": 2012,
+            "income": 41.4
+        },
+        {
+            "year": 2013,
+            "income": 44.7
+        },
+        {
+            "year": 2014,
+            "income": 46
+        },
+        {
+            "year": 2015,
+            "income": 48.3
+        },
     ];
 
 

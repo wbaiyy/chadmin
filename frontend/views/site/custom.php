@@ -1,68 +1,152 @@
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
+                    请选择入职时间：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    &nbsp;&nbsp;&nbsp;
+                    请选择年龄：
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="最小年龄"/> -
+                        <input type="text" class="form-control" placeholder="最大年龄"/>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        选择教育背景：
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>专科</option>
+                            <option>本科</option>
+                            <option>硕士</option>
+                            <option>博士</option>
+                            <option>博士后</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+
+                        选择科室：
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>外科</option>
+                            <option>内科</option>
+                            <option>放射科</option>
+                            <option>妇科</option>
+                            <option>儿科</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+
+                        <button type="submit" class="btn btn-default">搜索</button>
+                        <button type="submit" class="btn btn-default">重置</button>
+                    </div>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
-<div style="font-size:15px;">
+
+
+<div style="font-size:15px;margin-top: 120px;">
+
+    <div class="" style="">
+        <table class="table table-striped">
+            <caption><b>职员教育背景分布统计</b></caption>
+            <thead>
+            <tr>
+                <th>文凭</th>
+                <th>人数</th>
+                <th>平均年龄</th>
+                <th>平均入职时间(年)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>专科</td>
+                <td>69</td>
+                <td>34.6</td>
+                <td>5.3</td>
+
+            </tr>
+            <tr>
+                <td>本科</td>
+                <td>158</td>
+                <td>37.6</td>
+                <td>4.3</td>
+            </tr>
+            <tr>
+                <td>硕士</td>
+                <td>135</td>
+                <td>38.6</td>
+                <td>6.3</td>
+            </tr>
+            <tr>
+                <td>博士</td>
+                <td>50</td>
+                <td>45.6</td>
+                <td>7.3</td>
+            <tr>
+                <td>博士后</td>
+                <td>10</td>
+                <td>54.6</td>
+                <td>10.3</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv1" style="width: 600px; height: 400px;"></div>
     <p style="margin-left: 150px;margin-bottom: 20px;">医职员教育背景分布图</p>
 
+
+
+    <div class="" style="margin-top: 100px;">
+        <table class="table table-striped">
+            <caption><b>职员教育背景分布统计</b></caption>
+            <thead>
+            <tr>
+                <th>文凭</th>
+                <th>人数</th>
+                <th>平均年龄</th>
+                <th>平均入职时间(年)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>专科</td>
+                <td>69</td>
+                <td>34.6</td>
+                <td>5.3</td>
+
+            </tr>
+            <tr>
+                <td>本科</td>
+                <td>158</td>
+                <td>37.6</td>
+                <td>4.3</td>
+            </tr>
+            <tr>
+                <td>硕士</td>
+                <td>135</td>
+                <td>38.6</td>
+                <td>6.3</td>
+            </tr>
+            <tr>
+                <td>博士</td>
+                <td>50</td>
+                <td>45.6</td>
+                <td>7.3</td>
+            <tr>
+                <td>博士后</td>
+                <td>10</td>
+                <td>54.6</td>
+                <td>10.3</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv" style="width: 1200px; height: 400px;"></div>
     <p style="margin-left: 50px;margin-bottom: 20px;">医职员年龄和入职时间分布图</p>
 

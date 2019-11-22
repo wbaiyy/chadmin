@@ -1,65 +1,105 @@
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
                     请选择时间：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    &nbsp;&nbsp;&nbsp;
+                    选择设备生成商：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>飞利浦医疗</option>
+                        <option>罗氏诊断</option>
+                        <option>西门子</option>
+                        <option>迈瑞</option>
+                        <option>百特</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+                    器材名称：
+                    <input type="text" class="form-control" placeholder=""/>
+
+
+                    <div style="margin-top: 10px;">
+                        选择使用设备科室：
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>外科</option>
+                            <option>内科</option>
+                            <option>放射科</option>
+                            <option>妇科</option>
+                            <option>儿科</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+
+
+                        <button type="submit" class="btn btn-default">搜索</button>
+                        <button type="submit" class="btn btn-default">重置</button>
+                    </div>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
+
+
 <div style="font-size:15px;">
+    <div class="" style="margin-top: 120px;">
+        <table class="table table-striped">
+            <caption><b>当前时间医用设备使用分布统计</b></caption>
+            <thead>
+            <tr>
+                <th>设备名称</th>
+                <th>使用次数</th>
+                <th>维修次数</th>
+                <th>最后使用人</th>
+                <th>最后使用时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>核磁共振</td>
+                <td>172.24</td>
+                <td>3</td>
+                <td>张三</td>
+                <td>2018-05-07</td>
+            </tr>
+            <tr>
+                <td>救护车</td>
+                <td>149.36</td>
+                <td>6</td>
+                <td>张三</td>
+                <td>2018-05-07</td>
+            </tr>
+            <tr>
+                <td>B超</td>
+                <td>173.35</td>
+                <td>9</td>
+                <td>张三</td>
+                <td>2018-05-07</td>
+            </tr>
+            <tr>
+                <td>化验机</td>
+                <td>172.36</td>
+                <td>0%</td>
+                <td>张三</td>
+                <td>2018-05-07</td>
+            <tr>
+                <td>担架/轮椅</td>
+                <td>156.36</td>
+                <td>18</td>
+                <td>张三</td>
+                <td>2018-05-07</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div id="chartdiv" style="width:100%; height:400px;"></div>
     <div style="float:right;margin-right:20px;">
         <input onChange="changeZoomDates()" style="width:100px; text-align:center"
@@ -125,7 +165,7 @@
         graph.highField = "high";
         graph.lowField = "low";
         graph.closeField = "close";
-        graph.balloonText = "医疗器械:<b>[[open]]</b><br>救护车:<b>[[low]]</b><br>B超:<b>[[high]]</b><br>核磁共振:<b>[[close]]</b><br>";
+        graph.balloonText = "化验机:<b>[[open]]</b><br>救护车:<b>[[low]]</b><br>B超:<b>[[high]]</b><br>核磁共振:<b>[[close]]</b><br>担架/轮椅:<b>[[close]]</b><br>";
         // this one is for "line" graph type
         graph.valueField = "close";
 

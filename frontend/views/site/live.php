@@ -1,68 +1,164 @@
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
                     请选择时间：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    &nbsp;&nbsp;&nbsp;
+                        请选择住院类型：
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>感冒住院</option>
+                            <option>皮肤科住院</option>
+                            <option>外伤住院</option>
+                            <option>内科住院</option>
+                            <option>五官科住院</option>
+                            <option>肿瘤住院</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+
+                        <button type="submit" class="btn btn-default">搜索</button>
+                        <button type="submit" class="btn btn-default">重置</button>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
-<div style="font-size:15px;">
+
+
+<div style="font-size:15px;margin-top: 100px;">
+    <div class="" style="">
+        <table class="table table-striped">
+            <caption><b>当前时间内总住院人数统计</b></caption>
+            <thead>
+            <tr>
+                <th>住院类型</th>
+                <th>人次</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>病毒感冒住院</td>
+                <td>200</td>
+
+            </tr>
+            <tr>
+                <td>外伤住院</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td>产科住院</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>内科住院</td>
+                <td>72</td>
+            <tr>
+                <td>五官科住院</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>肿瘤住院</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>皮肤科住院</td>
+                <td>36</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv" style="width: 700px; height: 500px;"></div>
+
+
+    <div class="" style="margin-top: 150px;">
+        <table class="table table-striped">
+            <caption><b>当前时间内住院病人呼叫处理统计</b></caption>
+            <thead>
+            <tr>
+                <th>时间</th>
+                <th>呼叫处理数</th>
+                <th>值班部门</th>
+                <th>值班人</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1：00</td>
+                <td>15</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td>2：00</td>
+                <td>26</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td>3：00</td>
+                <td>45</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td>4：00</td>
+                <td>19</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            <tr>
+                <td>5：00</td>
+                <td>26</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td>6：00</td>
+                <td>41</td>
+                <td>一部二科</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td>8：00</td>
+                <td>36</td>
+                <td>二部二科</td>
+                <td>李四</td>
+            </tr>
+            <tr>
+                <td>9：00</td>
+                <td>29</td>
+                <td>二部二科</td>
+                <td>李四</td>
+            </tr>
+              <tr>
+                <td>10：00</td>
+                <td>19</td>
+              <td>二部二科</td>
+              <td>李四</td>
+            </tr>
+              <tr>
+                <td>11：00</td>
+                <td>47</td>
+                  <td>二部二科</td>
+                  <td>李四</td>
+            </tr>
+              <tr>
+                <td>12：00</td>
+                <td>34</td>
+                  <td>二部二科</td>
+                  <td>李四</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv1" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 40px;margin-bottom: 20px;margin-top: 20px;">当天住院患者呼叫次数统计分布</p>
 
 </div>
 
@@ -72,7 +168,7 @@
     var chart;
     var data = [
         {
-            "title": "感冒住院",
+            "title": "病毒感冒住院",
             "value": 200
         },
         {
@@ -191,7 +287,7 @@
         for (var i = 0; i < 1000; i++) {
             var newDate = new Date(firstDate);
             // each time we add one minute
-            newDate.setMinutes(newDate.getMinutes() + i);
+            newDate.setHours(newDate.getHours() + i);
             // some random number
             var visits = Math.round(Math.random() * 40) + 10;
             // add data item to the array

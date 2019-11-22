@@ -1,70 +1,139 @@
-<div class="row clearfix">
+<div class="row clearfix fixed" style="position: fixed; z-index: 1000">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">科室</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">诊别</a>
-                    </li>
-                    <li>
-                        <a href="#">挂号方式</a>
-                    </li>
-                </ul>
-
-
-                <form class="navbar-form navbar-left" role="search">
-                    请选择时间：
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <form class="navbar-form navbar-left" role="search" style="width: 1100px;">
+                    请选择年份：
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="开始时间"/> -
                         <input type="text" class="form-control" placeholder="结束时间"/>
                     </div>
+                    &nbsp;&nbsp;&nbsp;
+                    请选择年龄：
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="最小年龄"/> -
+                        <input type="text" class="form-control" placeholder="最大年龄"/>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                    选择门诊名称：
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>外科</option>
+                        <option>内科</option>
+                        <option>放射科</option>
+                        <option>妇科</option>
+                        <option>儿科</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+
                     <button type="submit" class="btn btn-default">搜索</button>
+                    <button type="submit" class="btn btn-default">重置</button>
+                    </div>
+
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">导出</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">病人资料<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">性别</a>
-                            </li>
-                            <li>
-                                <a href="#">病人来源</a>
-                            </li>
-                            <li>
-                                <a href="#">年龄段</a>
-                            </li>
-                            <li class="号别">
-                            </li>
-                            <li>
-                                <a href="#">费别</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
 
         </nav>
     </div>
 </div>
-<div style="font-size:15px;">
-    <div id="chartdiv" style="width:100%; height:400px;"></div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">各年份门诊数分布</p>
 
+
+<div style="font-size:15px; margin-top: 120px;">
+    <div class="" style="">
+        <table class="table table-striped">
+            <caption><b>各年份门诊数分布统计人次</b></caption>
+            <thead>
+            <tr>
+                <th>年份</th>
+                <th>人次</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2010</td>
+                <td>19800</td>
+
+            </tr>
+            <tr>
+                <td>2011</td>
+                <td>15800</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>16800</td>
+            </tr>
+            <tr>
+                <td>2013</td>
+                <td>13800</td>
+            <tr>
+                <td>2014</td>
+                <td>23800</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>17800</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>13800</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>15800</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="chartdiv" style="width:100%; height:400px;"></div>
+
+
+    <div class="" style="">
+        <table class="table table-striped">
+            <caption><b>每年各门诊病人年龄数分布统计（单位人次）</b></caption>
+            <thead>
+            <tr>
+                <th>年龄范围</th>
+                <th>人次</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>10岁-20岁</td>
+                <td>4025</td>
+
+            </tr>
+            <tr>
+                <td>20岁-30岁</td>
+                <td>1882</td>
+            </tr>
+            <tr>
+                <td>10岁以下</td>
+                <td>1809</td>
+            </tr>
+            <tr>
+                <td>30岁-40岁</td>
+                <td>1322</td>
+            <tr>
+                <td>50岁-60岁</td>
+                <td>1122</td>
+            </tr>
+            <tr>
+                <td>70岁-80岁</td>
+                <td>1114</td>
+            </tr>
+            <tr>
+                <td>40岁-50岁</td>
+                <td>998</td>
+            </tr>
+            <tr>
+                <td>80岁以上</td>
+                <td>711</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="chartdiv3" style="width: 100%; height: 400px;"></div>
-    <p style="margin-left: 20px;margin-bottom: 20px;margin-top: 20px;">当年门诊年龄数统计分布</p>
 </div>
 
 
@@ -75,200 +144,76 @@
 
     var chartData = [
         {
-            "year": "1950",
+            "year": "2000",
             "value": 16000
         },
         {
-            "year": "1951",
+            "year": "2001",
             "value": 16800
         },
         {
-            "year": "1952",
+            "year": "2002",
             "value": 17040
         },
         {
-            "year": "1953",
+            "year": "2003",
             "value": 16000
         },
         {
-            "year": "1954",
+            "year": "2004",
             "value": 17000
         },
         {
-            "year": "1955",
+            "year": "2005",
             "value": 19200
         },
         {
-            "year": "1956",
+            "year": "2006",
             "value": 16800
         },
         {
-            "year": "1957",
+            "year": "2007",
             "value": 16200
         },
         {
-            "year": "1958",
+            "year": "2008",
             "value": 15800
         },
         {
-            "year": "1959",
+            "year": "2009",
             "value": 12800
         },
         {
-            "year": "1960",
+            "year": "2010",
             "value": 19800
         },
         {
-            "year": "1961",
+            "year": "2011",
             "value": 15800
         },
         {
-            "year": "1962",
+            "year": "2012",
             "value": 16800
         },
         {
-            "year": "1963",
+            "year": "2013",
             "value": 13800
         },
         {
-            "year": "1964",
+            "year": "2014",
             "value": 23800
         },
         {
-            "year": "1965",
+            "year": "2015",
             "value": 17800
         },
         {
-            "year": "1966",
+            "year": "2016",
             "value": 13800
         },
         {
-            "year": "1967",
+            "year": "2017",
             "value": 15800
-        },
-        {
-            "year": "1968",
-            "value": 17800
-        },
-        {
-            "year": "1969",
-            "value": 16800
-        },
-        {
-            "year": "1970",
-            "value": 19800
-        },
-        {
-            "year": "1971",
-            "value": 14800
-        },
-        {
-            "year": "1972",
-            "value": 12800
-        },
-        {
-            "year": "1973",
-            "value": 18800
-        },
-        {
-            "year": "1974",
-            "value": 13800
-        },
-        {
-            "year": "1975",
-            "value": 17800
-        },
-        {
-            "year": "1976",
-            "value": 16800
-        },
-        {
-            "year": "1977",
-            "value": 11800
-        },
-        {
-            "year": "1978",
-            "value": 17800
-        },
-        {
-            "year": "1979",
-            "value": 13800
-        },
-        {
-            "year": "1980",
-            "value": 16800
-        },
-        {
-            "year": "1981",
-            "value": 12800
-        },
-        {
-            "year": "1982",
-            "value": 16800
-        },
-        {
-            "year": "1983",
-            "value": 19800
-        },
-        {
-            "year": "1984",
-            "value": 14800
-        },
-        {
-            "year": "1985",
-            "value": 11800
-        },
-        {
-            "year": "1986",
-            "value": 17800
-        },
-        {
-            "year": "1987",
-            "value": 18800
-        },
-        {
-            "year": "1988",
-            "value": 15800
-        },
-        {
-            "year": "1989",
-            "value": 11800
-        },
-        {
-            "year": "1990",
-            "value": 14800
-        },
-        {
-            "year": "1991",
-            "value": 18800
-        },
-        {
-            "year": "1992",
-            "value": 13800
-        },
-        {
-            "year": "1993",
-            "value": 14800
-        },
-        {
-            "year": "1994",
-            "value": 18800
-        },
-        {
-            "year": "1995",
-            "value": 13800
-        },
-        {
-            "year": "1996",
-            "value": 10800
-        },
-        {
-            "year": "1997",
-            "value": 11800
-        },
-        {
-            "year": "1998",
-            "value": 19800
         }
     ];
 
